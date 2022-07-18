@@ -6,7 +6,6 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 <br/>
 
 ## 작성 규칙
----
 1. 디렉토리와 파일명은 영어로 작성한다.
 2. 마크다운 언어로 작성하므로 확장자는 `.md`로 한다.
 3. 필요시 링크를 첨부하여 최대한 간략하게 작성한다.
@@ -14,6 +13,5 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 <br/>
 
 ## 분류
----
 - ## Java
     - [예외 처리](https://github.com/2dongyeop/TIL/blob/main/Java/exception-handling.md)
