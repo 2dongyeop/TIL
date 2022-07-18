@@ -25,7 +25,6 @@
 
 
 ## 1. 예외와 예외 클래스
----
 ### 에러(error)
 - 응용프로그램에서 실행 오류가 발생하는 것
 
@@ -44,7 +43,6 @@
 <br/>
 
 ## 2. 실행 예외
----
 ### 실행 예외는 오로지 개발자의 경험에 의해서 예외 처리 코드를 삽입해야 한다. 
 - 앞에서 말했듯이자바 컴파일러가 체크를 하지 않기 때문이다.
 
@@ -89,7 +87,6 @@ public class NullPointerExceptionExample {
 <br/>
 
 ## 3. 예외 처리 코드
----
 ### 예외 처리 코드
 - 프로그램에서 예외가 발생했을 경우 프로그램의 갑작스러운 종료를 막고, 정상 실행을 유지한다.
 - try - catch -finally 블록에 해당한다.
@@ -106,7 +103,6 @@ public class NullPointerExceptionExample {
 <br/>
 
 ## 4. 예외 종류에 따른 처리 코드
----
 ### 다중 catch문
 - try 블록 내부에서 다양한 종류의 예외가 발생할 수 있다. 
 - 이 경우, 발생되는 예외별로 예외 처리 코드를 다르게 하려면 다중 catch 블록을 작성해야 한다.
@@ -132,7 +128,6 @@ public class NullPointerExceptionExample {
 <br/>
 
 ## 5. 자동 리소스 닫기
----
 ### try - with - resource
 - 예외 발생 여부와 상관없이 사용했던 리소스 객체의 close() 메소드를 호출한다.
     - 리소스란 여러 가지 의미지만, 여기서는 데이터를 읽고 쓰는 객체로 이해하자.
@@ -142,7 +137,6 @@ public class NullPointerExceptionExample {
 <br/>
 
 ## 6. 예외 떠넘기기
----
 ### throws
 - 메소드 내부에서 예외가 발생할 수 있는 코드를 작성할 때, 경우에 따라 메소드를 호출한 곳으로 예외를 떠넘길 수도 있다. 
 - 메소드 선언부 끝에 작성되고, throws 키워드 뒤에는 떠넘길 예외 클래스를 쉼표로 나열해준다.
@@ -162,7 +156,6 @@ public class NullPointerExceptionExample {
 <br/>
 
 ## 7. 사용자 정의 예외와 예외 발생
----
 ### 사용자 정의 예외
 - 자바 표준 API에서 제공하는 예외 클래스만으로는 다양한 종류의 예외를 표현할 수가 없다. 
 - 이런 애플리케이션 서비스와 관련된 예외를 **애플리케이션 예외**(Application Exception)라고 한다. 또는 개발자가 직접 정의해서 만들어야 하므로 **사용자 정의 예외**라고도 한다.
@@ -179,7 +172,6 @@ public class NullPointerExceptionExample {
 <br/>
 
 ## 8. 예외 정보 얻기
----
 ### getMessage()
 - String 타입의 메세지를 갖는 예외 생성자를 이용했을 때, 이 메소드를 통해 예외 코드를 예외 메세지로 전달 받을 수 있다.
 
@@ -194,7 +186,6 @@ public class NullPointerExceptionExample {
 <br/>
 
 ## 마무리
----
 > throw와 throws의 차이
 >
 > - throw : 억지로 Exception을 발생시킬 때 사용
