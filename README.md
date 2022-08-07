@@ -27,3 +27,4 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [스택과 큐](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/stack-and-queue.md)
     - [배열과 연결리스트](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/array-and-linkedlist.md)
     - [배열리스트와 연결리스트](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/arraylist-and-linkedlist.md)
+    - [트리](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/tree.md)
