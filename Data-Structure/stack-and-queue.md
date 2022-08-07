@@ -18,7 +18,7 @@
 <br/>
 
 ## 스택을 이용하여 큐를 구현하는 방법
-<img src="https://github.com/2dongyeop/TIL/blob/main/Data-Structure/stack-make-queue.png" width = 500/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/Data-Structure/image/stack-make-queue.png" width = 500/>
 
 ### 동작 방식 
 1. inbox에 데이터를 삽입한다(push) -> A,B
