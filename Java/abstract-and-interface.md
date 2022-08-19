@@ -37,7 +37,7 @@ class Circle extends Shape {
 
 <br/>
 
-## 인터페이스
+## 인터페이스(interface)
 - 추상 메서드와 상수만을 포함하며, interface 키워드를 사용하여 선언한다.
 
 <br/>
