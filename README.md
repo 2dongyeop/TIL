@@ -32,4 +32,4 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [트리](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/tree.md)
 
 - ## Network
-    - [OSI 모델]()
+    - [OSI 7 layer]()
