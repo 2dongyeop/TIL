@@ -15,7 +15,7 @@
 <br/>
 
 
-<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/context-swtiching.png" width = 500/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/context-switching.png" width = 500/>
 
 
 <br/>
