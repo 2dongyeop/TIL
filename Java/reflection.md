@@ -16,32 +16,30 @@
 
 ## 예제 코드를 통한 이해
 - 아래는 실습을 위해 주어지는 클래스이다.
+```java
+    public class Dog extends Animal {
+        private String myName = "뽀삐";
+        public  String myCity = "서울";
 
-        ```java
-        public class Dog extends Animal{
-            private String myName = "뽀삐";
-            public  String myCity = "서울";
+        public Dog() {}
 
-            public Dog() {
-            }
-
-            private Dog(String myName) {
-                this.myName = myName;
-            }
-
-            private void myName(String name){
-                System.out.println("myName : " + name);
-            }
-
-            private void myCity(String city){
-                System.out.println("myCity : " + city);
-            }
-            
-            private void hello(){
-                System.out.println("hello~");
-            }
+        private Dog(String myName) {
+            this.myName = myName;
         }
-        ```
+
+        private void myName(String name) {
+            System.out.println("myName : " + name);
+        }
+
+        private void myCity(String city) {
+            System.out.println("myCity : " + city);
+        }
+            
+        private void hello() {
+            System.out.println("hello~");
+        }
+    }    
+```
 
 <br/>
 
@@ -65,7 +63,7 @@
 <br/>
 
 - **Case 02 - class를 참조할 수 없고 이름만 알고 있는 상황이라면?**
-
+    - `forName()` 메소드를 이용한다.
         ```java
         public class Example {
             public static void main(String[] args) throws Exception{
@@ -160,7 +158,7 @@
 ### Method 찾기
 
 - **Case 01 - 인자가 없는 메서드 가져오는 방법**
-
+    - 두 번째 매개변수에 null을 대입한다.
         ```java
         import java.lang.reflect.Method;
 
@@ -177,7 +175,7 @@
 <br/>
 
 - **Case 02 - 인자가 있는 메서드 가져오는 방법**
-
+    - 두 번째 매개변수에 해당 타입을 입력한다.
         ```java
         import java.lang.reflect.Method;
 
@@ -195,14 +193,14 @@
 <br/>
 
 - **Case 03 - 모든 메서드를 가져오는 방법**
-
+    - 모든 메소드를 불러와 접근한다.
         ```java
         import java.lang.reflect.Method;
 
         public class Example {
             public static void main(String[] args) throws Exception{
                 Class cls = Class.forName("Dog");
-                **Method methods[] = cls.getDeclaredMethods();**
+                Method methods[] = cls.getDeclaredMethods();
 
                 for (Method item : methods) {
                     System.out.println("Method : " + item);
@@ -217,14 +215,14 @@
 <br/>
 
 - **Case 04 - 상속받은 메서드와 `public` 메서드만 가져오는 방법**
-
+    - `getMethods()`를 이용한다.
         ```java
         import java.lang.reflect.Method;
 
         public class Example {
             public static void main(String[] args) throws Exception{
                 Class cls = Class.forName("Dog");
-                **Method methods[] = cls.getMethods();**
+                Method methods[] = cls.getMethods();
 
                 for (Method item : methods) {
                     System.out.println("Method : " + item);
@@ -238,7 +236,7 @@
 ### Field 찾기
 
 - **Case 01 - 필드의 이름을 알고 있을 경우**
-
+    - 매개변수에 필드 이름을 입력한다.
         ```java
         public class Example {
             public static void main(String[] args) throws Exception{
@@ -255,12 +253,12 @@
 
 - **Case 02 - 모든 필드를 찾는 방법**
     - (단, 상속받은 객체의 정보는 찾지 않습니다.)
-
+    - `getDeclaredFields()` 메소드를 이용한다.
         ```java
         public class Example {
             public static void main(String[] args) throws Exception{
                 Class cls = Class.forName("Dog");
-                **Field fields[] = cls.getDeclaredFields();**
+                Field fields[] = cls.getDeclaredFields();
 
                 for (Field item : fields) {
                     System.out.println(item);
