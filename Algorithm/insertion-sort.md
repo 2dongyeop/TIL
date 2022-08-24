@@ -67,3 +67,9 @@ public class Insertion_Sort {
 
 - 결과적으로 삽입 정렬은 레코드 양이 많고, 레코드 크기가 클 경우 적합하지 않다.
 - 안전한 정렬 방법이기도 하며, 알고리즘 자체가 매우 간단하여 다른 알고리즘보다 레코드 수가 적을 경우 유리하다.
+
+<br/>
+
+---
+
+> 추가로 삽입 정렬을 이용해 알고리즘 문제를 풀이한 [링크](https://github.com/2dongyeop/baekjoon/tree/main/src/sortWords)를 첨부합니다.
