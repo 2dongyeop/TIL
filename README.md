@@ -34,5 +34,8 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [배열리스트와 연결리스트](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/arraylist-and-linkedlist.md)
     - [트리](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/tree.md)
 
+- ## Algorithm
+    - [선택 정렬](https://github.com/2dongyeop/TIL/blob/main/Algorithm/selection-sort.md)
+
 - ## Network
     - [OSI 7 layer](https://github.com/2dongyeop/TIL/blob/main/Network/OSI-7layer.md)
