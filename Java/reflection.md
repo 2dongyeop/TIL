@@ -14,7 +14,7 @@
 
 <br/>
 
-## 예제 코드를 통한 이해
+## 예제 코드로 이해하기
 - 아래는 실습을 위해 주어지는 클래스이다.
 ```java
     public class Dog extends Animal {
