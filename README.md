@@ -36,6 +36,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 - ## Algorithm
     - [선택 정렬](https://github.com/2dongyeop/TIL/blob/main/Algorithm/selection-sort.md)
+    - [삽입 정렬](https://github.com/2dongyeop/TIL/blob/main/Algorithm/insertion-sort.md)
 
 - ## Network
     - [OSI 7 layer](https://github.com/2dongyeop/TIL/blob/main/Network/OSI-7layer.md)
