@@ -2,7 +2,7 @@
 
 <br/>
 
-![](https://media.vlpt.us/images/dongvelop/post/6621155f-4dfe-4a29-82f1-3017dd70558c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-04-03%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.33.01.png)
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/CPU-scheduling1.png" width = 500/>
 ### 스케줄링 알고리즘이란? 
 -  **준비 큐**에 있는 프로세스 중 **어느 프로세스에게 CPU를 할당할 것인지 결정**하는 문제이다.
 
@@ -25,7 +25,7 @@
 
 ### 선점 스케줄링
 
-![](https://media.vlpt.us/images/dongvelop/post/e2be275c-1657-4c00-be0b-c08ddac3f7bc/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-04-03%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.00.33.png)
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/CPU-scheduling2.png" width = 500/>
 
 - 낮은 우선순위를 가진 프로세스보다 높은 우선순위를 가진 프로세스가 CPU를 선점하는 방식
 - OS가 스케줄링의 알고리즘에 따라 적당한 프로세스에게 CPU를 할당하고, **필요시에는 회수**하는 방식
@@ -34,7 +34,7 @@
 
 ### 비선점 스케줄링
 
-![](https://media.vlpt.us/images/dongvelop/post/93979cb8-f258-4c7c-959d-09b5694e66b9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-04-03%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.01.25.png)
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/CPU-scheduling3.png" width = 500/>
 - Time-slice 가 없는 스케줄링
 - CPU를 사용중인 프로세스가 **자율적으로 반납**하도록 하는 방식
 - 따라서 프로세스가 자율적으로 CPU를 반납하는 시점에서 사용한다.
@@ -50,7 +50,7 @@
 
 <br/>
 
-![](https://media.vlpt.us/images/dongvelop/post/23ce00d7-3234-4c12-b9e9-ea312f5b74f6/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-04-03%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.07.05.png)
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/CPU-scheduling4.png" width = 500/>
 
 - 특징으로는 **비선점형** 스케줄링이다.
 - **호위 효과**(convoy effect)가 발생 : short process behind long process
@@ -61,9 +61,10 @@
 >
 ### 최단 작업 우선 스케줄링 (SJF - Short Job First)
 
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/CPU-scheduling5.png" width = 500/>
 - **평균 대기 시간을 최소화**하기 위해 사용하는 방식
 - **버스트 시간이 짧은 프로세스부터 CPU를 할당**한다.
-![](https://media.vlpt.us/images/dongvelop/post/5d2c7015-edad-415a-8fe1-ff443c12b941/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-04-03%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.13.24.png)
 - 문제는 다음 CPU 버스트의 길이를 알 수 없어, 이상적인 설계라고만 할 수 있다.
 - 특징으로는 선점형/비선점형 방식이 존재한다.
   -	 비선점형 : 실행중인 프로세스가 CPU 버스트를 완료할 때까지 선점하지 않는다.
@@ -80,10 +81,11 @@
 
 ### 라운드 로빈 스케줄링 (RR - Round Robin)
 
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/CPU-scheduling6.png" width = 500/>
 - **시분할 시스템**을 위해 설계된 스케줄링
 - 모든 프로세스가 같은 우선순위를 가지고, **시간 할당량을 기반**으로 스케줄링한다.
 - Time slice burst가 일어나면 해당 프로세스는 **스케줄링 큐의 끝으로 이동**한다
-![](https://media.vlpt.us/images/dongvelop/post/2c542f56-4249-4231-a118-ab55db086c05/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-04-03%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.25.09.png)
 - 특징으로는 선점형 스케줄링이다.
 - 라운드 로빈 스케줄링의 성능은 시간 할당량의 크기에 매우 많은 영향을 받는다.
   - 시간 할당량이 매우 크면, 선입 선출과 같고,
@@ -94,8 +96,9 @@
 
 ### 우선 순위 스케줄링 (Priority Scheduling)
 
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/CPU-scheduling7.png" width = 500/>
 - 각 프로세스에게 우선 순위가 주어지고, **우선 순위가 높은 순**으로 CPU가 할당된다.
-![](https://media.vlpt.us/images/dongvelop/post/baafdca2-6269-446e-b175-39f2ef434f0c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-04-03%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.28.15.png)
 - **우선 순위가 같은 프로세스들은 선입 선처리 순서로 스케줄링한다.**
 - 선점형/비선점형이 있다.
   - 선점형 : 새로 도착한 프로세스의 우선순위가 현재 실행되는 프로세스의 우선순위보다 높으면 선점한다.
