@@ -22,6 +22,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [추상클래스와 인터페이스](https://github.com/2dongyeop/TIL/blob/main/Java/abstract-and-interface.md)
     - [split()과 StringTokenizer 비교](https://github.com/2dongyeop/TIL/blob/main/Java/split-and-stringTokenizer.md)
     - [리플렉션](https://github.com/2dongyeop/TIL/blob/main/Java/reflection.md)
+    - [Array.sort()와 Collections.sort()](https://github.com/2dongyeop/TIL/blob/main/Java/Array-sort-and-Collections-sort.md)
 
 - ## OS
     - [프로세스와 스레드](https://github.com/2dongyeop/TIL/blob/main/OS/process-and-thread.md)
