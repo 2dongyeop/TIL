@@ -30,6 +30,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [문맥 교환](https://github.com/2dongyeop/TIL/blob/main/OS/context-switching.md)
     - [CPU 스케줄링](https://github.com/2dongyeop/TIL/blob/main/OS/CPU-scheduling.md)
     - [동기와 비동기](https://github.com/2dongyeop/TIL/blob/main/OS/sync-and-async.md)
+    - [블로킹과 논블로킹](https://github.com/2dongyeop/TIL/blob/main/OS/blocking-and-nonblocking.md)
 
 - ## DataStructure
     - [스택과 큐](https://github.com/2dongyeop/TIL/blob/main/Data-Structure/stack-and-queue.md)
