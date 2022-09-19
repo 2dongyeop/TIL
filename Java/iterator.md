@@ -101,6 +101,6 @@ public class InternalIterationList<E> extends ArrayList<E> {
                 return e;
             }
         });
-		}
+	}
 }
 ```
