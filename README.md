@@ -26,7 +26,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [내부 반복자와 외부 반복자](https://github.com/2dongyeop/TIL/blob/main/Java/iterator.md)
     - [Wrapper class](https://github.com/2dongyeop/TIL/blob/main/Java/wrapper.md)
     - [Call by Value vs Call by Reference](https://github.com/2dongyeop/TIL/blob/main/Java/call-by.md)
-    - [StringBuffer vs StringBuilder](https://github.com/2dongyeop/TIL/blob/main/Java/stringbuilder-and-stringbuffer.md.md)
+    - [StringBuffer vs StringBuilder](https://github.com/2dongyeop/TIL/blob/main/Java/stringbuilder-and-stringbuffer.md)
 
 <br/>
 
