@@ -32,4 +32,4 @@
 <br/>
 
 
-<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/stringbuilder-and-stringbuffer.png" width = 500/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/StringBuilder-StringBuffer.png" width = 500/>
