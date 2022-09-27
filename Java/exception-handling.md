@@ -44,7 +44,7 @@
 
 ## 2. 실행 예외
 ### 실행 예외는 오로지 개발자의 경험에 의해서 예외 처리 코드를 삽입해야 한다. 
-- 앞에서 말했듯이자바 컴파일러가 체크를 하지 않기 때문이다.
+- 앞에서 말했듯이, 자바 컴파일러가 체크를 하지 않기 때문이다.
 
 <br/>
 
@@ -64,7 +64,7 @@ public class NullPointerExceptionExample {
 
 ### ArrayIndexOutOfBoundsException
 - 배열에서 인덱스 범위를 초과하여 사용할 경우에 발생한다
-- 예를 들어 길이가 3인 int[] arr = new int[3] 배열을 선언했을 때, 범위를 초과하여 arr[3]을 사용할 경우 발생한다.
+- 예를 들어 길이가 3인 `int[] arr = new int[3]` 배열을 선언했을 때, 범위를 초과하여 arr[3]을 사용할 경우 발생한다.
 
 <br/>
 
@@ -89,7 +89,7 @@ public class NullPointerExceptionExample {
 ## 3. 예외 처리 코드
 ### 예외 처리 코드
 - 프로그램에서 예외가 발생했을 경우 프로그램의 갑작스러운 종료를 막고, 정상 실행을 유지한다.
-- try - catch -finally 블록에 해당한다.
+- `try-catch-finally` 블록에 해당한다.
 
 <br/>
 
