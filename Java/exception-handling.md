@@ -206,18 +206,18 @@ public class NullPointerExceptionExample {
     - 개발자의 판단에 따른 처리가 가능하다.
     ```java
     public class Test {
-    		public static void main(String[] args) {
-    				int a = 2;
-    				int b = 0;
-    				divide(a,b);
-    		}
+    	public static void main(String[] args) {
+    		int a = 2;
+    		int b = 0;
+    		divide(a,b);
+    	}
     	
-    		private static int divide(int a, int b) {
-    				if (b == 0) {
-    						throw new ArithmeticException("0으로 나눌 수 없습니다.");
-    				}
-    				return a / b;
+    	private static int divide(int a, int b) {
+    		if (b == 0) {
+    			throw new ArithmeticException("0으로 나눌 수 없습니다.");
     		}
+    		return a / b;
+    	}
     }
     ```
 
@@ -229,22 +229,22 @@ public class NullPointerExceptionExample {
 - 예외 처리는 해당 메서드를 사용한 곳에서 처리한다.
     ```java
     public class Test {
-    		public static void main(String[] args) {
-    				int a = 2;
-    				int b = 0;
-    				try {
-    						divide(a,b);
-    				} catch (ArithmeticException e) {
-    						e.printStackTrace();
-    				}
+    	public static void main(String[] args) {
+    		int a = 2;
+    		int b = 0;
+    		try {
+        		divide(a,b);
+    		} catch (ArithmeticException e) {
+    			e.printStackTrace();
     		}
+    	}
     	
-    		private static int divide(int a, int b) throws ArithmeticException {
-    				if (b == 0) {
-    						throw new ArithmeticException("0으로 나눌 수 없습니다.");
-    				}
-    				return a / b;
+    	private static int divide(int a, int b) throws ArithmeticException {
+    		if (b == 0) {
+    			throw new ArithmeticException("0으로 나눌 수 없습니다.");
     		}
+    		return a / b;
+    	}
     }
     ```
     
