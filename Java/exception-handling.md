@@ -198,6 +198,97 @@ public class NullPointerExceptionExample {
 
 <br/>
 
+<br/>
+
+## 예외 던지기 사용 예시 (throw, throws)
+### throw 사용 예시
+- 위에서 말했듯이 `throw` 는 개발자가 의도적으로 예외를 발생시키는 것.
+    - 개발자의 판단에 따른 처리가 가능하다.
+    ```java
+    public class Test {
+    		public static void main(String[] args) {
+    				int a = 2;
+    				int b = 0;
+    				divide(a,b);
+    		}
+    	
+    		private static int divide(int a, int b) {
+    				if (b == 0) {
+    						throw new ArithmeticException("0으로 나눌 수 없습니다.");
+    				}
+    				return a / b;
+    		}
+    }
+    ```
+
+<br/>
+
+
+### throws 사용 예시
+- 메서드 내에서 예외처리를 하지 않고, 책임을 전가
+- 예외 처리는 해당 메서드를 사용한 곳에서 처리한다.
+    ```java
+    public class Test {
+    		public static void main(String[] args) {
+    				int a = 2;
+    				int b = 0;
+    				try {
+    						divide(a,b);
+    				} catch (ArithmeticException e) {
+    						e.printStackTrace();
+    				}
+    		}
+    	
+    		private static int divide(int a, int b) throws ArithmeticException {
+    				if (b == 0) {
+    						throw new ArithmeticException("0으로 나눌 수 없습니다.");
+    				}
+    				return a / b;
+    		}
+    }
+    ```
+    
+<br/>
+
+<br/>
+
+> 이왕이면 `throw`보다는 `throws`를 사용하는게 좋을까?
+>
+>   → 예외가 발생할 수 있는 코드가 있다는 것을 인지시키고, 예외처리를 강요
+>
+> 여러번 `throws`를 이용해 호출한 메소드에서 예외처리를 하도록 책임을 전가하면?
+>
+>   → 지저분한 코드가 만들어지고, 객체지향이 아닌 절차지향이 되어버림.
+
+<br/>
+
+
+### ‼️ `e.printStackTrace()`의 취약점
+예외 처리를 하는 경우에 `catch` 블록에는 아래와 같은 오류 로그를 많이 남긴다.
+
+- `e.getMessage()` : 에러의 원인을 간단하게 출력
+- `e.toString()` : 에러의 Exception 내용과 원인을 출력
+- `e.printStackTrace()` : 에러의 발생근원지를 찾아 단계별로 에러를 출력
+
+<br/>
+
+이 메소드들은 예외가 발생할 경우 콘솔에 시스템 파일 경로 및 각종 정보들이 확인되게 해주는데,
+
+→ 이는 외부인들로부터 어떤 내부 구조의 실마리를 제공한다.
+
+<br/>
+
+또한, 이 메소드는 Java 리플렉션을 사용하여 추적하는 것이라 많은 오버헤드가 발생할 수 있다.
+
+→ 이는 성능을 중시하는 서비스에서는 영향이 클 수 있다.
+
+<br/>
+따라서, 최소한의 정보만 정의하여 로그를 남기도록 메소드를 재정의하거나,
+
+`e.getMessage()`나 `e.toString()`을 이용하는 것이 안전하다.
+
+<br/>
+
 ## 트랜잭션(Transaction)
 - 트랜잭션은 하나의 작업 단위를 말한다.
 
