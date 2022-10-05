@@ -440,3 +440,27 @@
 
 <br/>
 
+## 7. 데몬 스레드
+- 데몬(`daemon`) 스레드는 주 스레드의 작업을 돋는 보조적인 역할을 수행하는 스레드이다.
+  - 주 스레드가 종료되면 데몬 스레드는 강제 자동 종료된다.
+  - 이는 주 스레드가 종료되면 존재 의미가 없어지기 때문임.
+
+<br/>
+
+- 데몬 스레드 만들기
+    ```java
+    public static void main(String[] args) {
+        AutoSaveThread thread = new AutoSaveThread();
+        thread.setDaemon(true);
+        thread.start();
+        ...
+    }
+    ```
+    - 데몬으로 만들기 위해서는 스레드의 `setDaemon(true)`를 호출해준다.
+      - 단, `start()`가 호출된 후 `setDaemon(true)`를 호출하면 `IllegalThreadStateException`이 발생한다.
+  - 현재 실행 중인 스레드가 데몬 스레드인지 구별하기 위해선 `isDaemon()`을 이용한다.
+
+<br/>
+
+<br/>
+
