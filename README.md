@@ -60,7 +60,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [BFS & DFS](https://github.com/2dongyeop/TIL/blob/main/Algorithm/DFS-BFS.md)
     - [kruskal MST](https://github.com/2dongyeop/TIL/blob/main/Algorithm/kruskal-MST.md)
     - [prim MST](https://github.com/2dongyeop/TIL/blob/main/Algorithm/prim-MST.md)
-    - [Hashing](https://leedongyeop.notion.site/6005f9c735fd40a1a4a133dfa398b61d)
+    - [hashing](https://leedongyeop.notion.site/6005f9c735fd40a1a4a133dfa398b61d)
 
 <br/>
 
