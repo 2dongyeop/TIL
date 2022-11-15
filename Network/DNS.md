@@ -22,7 +22,7 @@
 
 #### 3. 도메인 이름 체계
 
-<img src="https://github.com/2dongyeop/TIL/blob/main/Network/image/DNS-name.png" width = 600/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/Network/image/DNS-name.png" width = 900/>
 
 <br/>
 
@@ -30,7 +30,7 @@
 
 ### 도메인 주소가 IP 주소로 바뀌는 과정 (feat. 주소 창에 `naver.com`을 입력하면 일어나는 일)
 
-<img src="https://github.com/2dongyeop/TIL/blob/main/Network/image/DNS-process.png" width = 600/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/Network/image/DNS-process.png" width = 900/>
 
 1. 주소창에 도메인 주소가 입력된다.
 
