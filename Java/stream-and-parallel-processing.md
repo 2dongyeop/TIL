@@ -171,3 +171,75 @@ public class MapAndReduceExample {
 <br/>
 
 <br/>
+
+## 🔥 2. 스트림의 종류
+자바 8부터 새로 추가된 java.util.stream 패키지에는 스트림 API들이 포진하고 있다.
+
+- BaseStream 인터페이스
+  - 모든 스트림에서 사용할 수 있는 공통 메소드들이 정의되어 있을 뿐 직접적으로 사용하지 않는다.
+  - Stream 
+    - 객체 요소를 처리하는 스트림
+  - IntStream, LongStream, DoubleStream 
+    - 각각 해당 기본 타입 요소를 처리하는 스트림
+
+<br/>
+
+> 스트림 인터페이스의 구현 객체는 컬랙션과 배열 외에도 다양한 소스로부터 얻을 수 있다.
+
+<br/>
+
+### 컬렉션으로부터 스트림 얻기
+```java
+public class FromCollectionExample {
+    public static void main(String[] args) {
+        List<Student> studentList = Arrays.asList(
+            new Student("홍길동", 10),
+            new Student("신용권", 20),
+            new Student("유미선", 30)
+        );
+
+        Stream<Student> stream = studentList.stream();
+        stream.forEach(s -> System.out.println(s.getName()));
+    }
+}
+```
+
+<br/>
+
+### 배열로부터 스트림 얻기
+```java
+public class FromArrayExample {
+    public static void main(String[] args) {
+        String[] strArray = {"홍길동", "신용권", "김미나"};
+        Stream<String> strStream = Arrays.stream(strArray);
+        strStream.forEach(a -> System.out.print(a + ","));
+
+        System.out.println();
+
+        int[] intArray = {1, 2, 3, 4, 5};
+        IntStream intStream = Arrays.stream(intArray);
+        intStream.forEach(a -> System.out.print(a + ","));
+    }
+}
+```
+
+<br/>
+
+### 숫자 범위로부터 스트림 얻기
+```java
+public class FromIntRangeExample {
+    public static int sum;
+
+    public static void main(String[] args) {
+        IntStream stream = IntStream.rangeClosed(1, 100); /* 1부터 100까지 */
+        /* IntStream stream = IntStream.range(1, 100); 1부터 99까지 */
+        stream.forEach(a -> sum += a);
+        System.out.println("총합: " + sum);
+    }
+}
+```
+
+<br/>
+
+<br/>
+
