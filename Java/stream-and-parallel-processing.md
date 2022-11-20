@@ -113,7 +113,7 @@
 
 <br/>
 
-<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/iterator2.png" width = 500/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/iterator2.png" width = 700/>
 
 - 내부 반복자를 이용하면 얻는 이점
   - 컬렉션 내부에서 어떻게 요소를 반복시킬 것인가는 컬렉션에 맡긴다.
@@ -138,7 +138,7 @@
   - 최종 처리 → 반복, 카운팅, 평균, 총합 등의 집계 처리
 
 
-<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/중간처리-최종처리.png" width = 500/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/중간처리-최종처리.png" width = 700/>
 
 <br/>
 
@@ -243,3 +243,73 @@ public class FromIntRangeExample {
 
 <br/>
 
+## 🔥 3. 스트림 파이프라인
+- 리덕션(Reductuon)이란?
+  - 대량의 데이터를 가공해 축소하는 것
+
+<br/>
+
+- 컬렉션의 요소를 리덕션의 결과물(합계,평균 등)로 바로 집계할 수 없을 경우엔?
+  - 집계하기 좋도록 필터링, 매핑, 정렬, 그룹핑 등의 중간 처리가 필요하다.
+
+<br/>
+
+### 중간 처리와 최종 처리
+- 스트림은 중간 처리와 최종 처리를 파이프라인(pipelines)으로 해결한다.
+
+<br/>
+
+- 파이프라인이란?
+  - 파이프라인은 여러 개의 스트림이 연결되어 있는 구조이다.
+  - 내부에 최종 처리를 제외하곤 모두 중간 처리 스트림이다.
+
+<br/>
+
+💡 중간 스트림이 생성될 때 요소들이 바로 중간 처리되는 것이 아님을 기억하자!
+  - 최종 처리가 시작되기 전까지 중간 처리는 지연(lazy)되고,
+  - 최종 처리가 시작되면 비로소 컬렉션의 요소가 하나씩 중간 스트림에서 처리되어 최종까지 온다.
+
+<br/>
+
+    ```java
+    double ageAvg = list.stream()     //오리지날 스트림
+      .filter(m -> m.getSex() == Member.MALE)  //중간 처리 스트림
+      .mapToInt(Member :: getAge)     //중간 처리 스트림
+      .average()                      //최종 처리 스트림
+      .getAsDouble();
+    ```
+
+#### 예제 코드
+- 회원 목록에서 성별이 남성인 회원의 평균 나이 구하기
+  - 파이프라인을 자바 코드로 구현
+    ```java
+    Stream<Member> maleFemaleStream = list.stream();
+    Stream<Member> maleStream = maleFeamleStream.filter(m -> m.getSex() == Member.MALE);
+    IntStream ageStream = maleStream.mapToInt(Member :: getAge);
+    OptionalDouble optionalDouble = ageStream.average();
+    double ageAvg = optionalDouble.getAsDouble();
+    ```
+
+<br/>
+
+  - 로컬 변수를 생략하고 연결하여 만든 파이프라인
+      ```java
+      double ageAvg = list.stream()     //오리지날 스트림
+        .filter(m -> m.getSex() == Member.MALE)  //중간 처리 스트림
+        .mapToInt(Member :: getAge)     //중간 처리 스트림
+        .average()                      //최종 처리 스트림
+        .getAsDouble();
+    ```
+<br/>
+
+### 중간 처리 메소드와 최종 처리 메소드
+- 중간 처리와 최종 처리를 쉽게 구분하는 방법은 리턴타입을 보면 된다.
+  - 중간 처리 메소드 → 리턴 타입이 스트림이다.
+  - 최종 처리 메소드 → 리턴 타입이 기본 타입 혹은 `OptionalXXX` 이다.
+
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/pipeline-method.png" width = 700/>
+
+<br/>
+
+<br/>
