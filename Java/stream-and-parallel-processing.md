@@ -271,14 +271,6 @@ public class FromIntRangeExample {
 
 <br/>
 
-    ```java
-    double ageAvg = list.stream()     //오리지날 스트림
-      .filter(m -> m.getSex() == Member.MALE)  //중간 처리 스트림
-      .mapToInt(Member :: getAge)     //중간 처리 스트림
-      .average()                      //최종 처리 스트림
-      .getAsDouble();
-    ```
-
 #### 예제 코드
 - 회원 목록에서 성별이 남성인 회원의 평균 나이 구하기
   - 파이프라인을 자바 코드로 구현
@@ -313,3 +305,50 @@ public class FromIntRangeExample {
 <br/>
 
 <br/>
+
+## 🔥 4. 필터링
+- 필터링은 중간 처리 기능으로 요소를 걸러내는 역할을 한다.
+- 아래 두 필터링 메소드는 모든 스트림이 가지고 있는 공통 메소드이다.
+  - distinct()
+  - filter()
+
+<br/>
+
+- `distinct()` : 중복을 제거
+  - Stream의 경우 `Object.equals(Object)`가 true이면 동일한 객체로 판단하여 중복을 제거한다.
+
+<br/>
+
+- `filter()` : 조건을 필터링
+  - 매개값으로 주어진 Predicate가 true를 리턴하는 요소만 필터링한다.
+
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/filtering-method.png" width = 600/>
+
+
+#### 예제 코드
+```java
+public class FilteringExample {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("홍길동", "신용권", "감자바", "신용권", "신민철");
+
+        names.stream()
+            .distinct()        //중복 제거
+            .forEach(n->System.out.println(n));
+        System.out.println();  //홍길동 신용권 김자바 신민철
+
+        names.stream()
+            .filter(n->n.startsWith("신"))  //필터링
+            .forEach(n->System.out.println(n));
+        System.out.println();  //신용권 신용권 신민철
+
+        names.stream()
+            .distinct()         //중복 제거 후 필터링
+            .filter(n->n.startsWith("신"))
+            .forEach(n->System.out.println(n));  //신용권 신민철
+    }
+} 
+```
+
+<br/>
+
