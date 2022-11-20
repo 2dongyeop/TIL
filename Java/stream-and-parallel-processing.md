@@ -309,8 +309,8 @@ public class FromIntRangeExample {
 ## 🔥 4. 필터링
 - 필터링은 중간 처리 기능으로 요소를 걸러내는 역할을 한다.
 - 아래 두 필터링 메소드는 모든 스트림이 가지고 있는 공통 메소드이다.
-  - distinct()
-  - filter()
+  - `distinct()`
+  - `filter()`
 
 <br/>
 
@@ -334,13 +334,13 @@ public class FilteringExample {
 
         names.stream()
             .distinct()        //중복 제거
-            .forEach(n->System.out.println(n));
-        System.out.println();  //홍길동 신용권 김자바 신민철
+            .forEach(n->System.out.println(n));  //홍길동 신용권 김자바 신민철
+        System.out.println();  
 
         names.stream()
             .filter(n->n.startsWith("신"))  //필터링
-            .forEach(n->System.out.println(n));
-        System.out.println();  //신용권 신용권 신민철
+            .forEach(n->System.out.println(n));  //신용권 신용권 신민철
+        System.out.println(); 
 
         names.stream()
             .distinct()         //중복 제거 후 필터링
@@ -352,3 +352,117 @@ public class FilteringExample {
 
 <br/>
 
+<br/>
+
+## 🔥 5. 매핑
+- 중간 처리 기능 중 하나로,, 스트림의 요소를 다른 요소로 대체하는 작업이다.
+- 스트림에서 제공하는 매핑 메소드는 아래와 같다.
+  - `flatXXX()`
+  - `mapXXX()`
+  - `asDoubleStream()`
+  - `boxed()`
+
+<br/>
+
+### `flatXXX()` 메소드
+- 이 메소드는 요소를 대체하는 복수 개의 요소들로 구성된 새로운 스트림을 리턴한다.
+
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/flat-method.png" width = 600/>
+
+
+### 예제 코드
+```java
+/*
+입력된 데이터(요소)들이 List<String>에 저장되어 있다고 가정하고, 
+요소별로 단어를 뽑아 단어 스트림으로 재생성한다.
+만약 데이터가 숫자라면 숫자를 뽑아 숫자 스트림으로 재생성한다.
+*/
+
+public class FlatMapExample {
+    public static void main(String[] args) {
+        List<String> inputList1 = Arrays.asList("java8 lambda", "stream mapping");
+
+        inputList1.stream()
+            .flatMap(data->Arrays.stream(data.split(" ")))
+            .forEach(word->System.out.println(word));
+        System.out.println();
+
+        List<String> inputList2 = Arrays.asList("10, 20, 30", "40, 50, 60");
+
+        inputList2.stream()
+            .flatMapToInt(data->{
+                String[] strArray = data.split(",");
+                int[] intArr = new int[strArray.length];
+                for (int i = 0; i < strArray.length; i++) {
+                    intArr[i] = Integer.parseInt(strArray[i].trim());
+                }
+                return Arrays.stream(intArr);
+            })
+            .forEach(number->System.out.println(number));
+    }
+}
+```
+
+<br/>
+
+### `mapXXX()` 메소드
+- 이 메소드는 요소를 대체하는 요소로 구성된 새로운 스트림을 리턴한다.
+
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/map-method.png" width = 600/>
+
+#### 예제 코드
+```java
+/*
+학생 List에서 학생의 점수를 요소로 하는 새로운 스트림을 생성하고, 
+점수를 순차적으로 출력한다.
+*/
+
+public class MapExample {
+    public static void main(String[] args) {
+        List<Student> studentList = Arrays.asList(
+            new Student("홍길동", 10),
+            new Student("신용권", 20),
+            new Student("유미선", 30)
+        );
+
+        studentList.stream()
+            .mapToInt(Student::getScore)
+            .forEach(score->System.out.println(score));
+    }
+}
+```
+
+<br/>
+
+### `boxed()`, `asDoubleStream()`, `asLongStream()` 메소드
+- `boxed()`
+  - int요소, long요소, double요소를 Integer, Long, Double요소로 박싱해서 Stream을 생성
+- `asDoubleStream()`
+  - IntStream()의 int요소 또는 LongStream의 long요소를 double요소로 타입 변환해서 DoubleStream을 생성
+- `asLongStream()`
+  - IntStream()의 int요소를 long요소로 타입 변환해서 LongStream을 생성
+
+<br/>
+
+#### 예제 코드
+```java
+/*
+int[] 배열로 IntStream을 얻고, double로 타입 변환해 DoubleStream을 생성한다.
+또한 int 요소를 Integer 객체로 박싱해 Stream<Integer>를 생성한다.
+*/
+public class AsDoubleStreamAndBoxedExample {
+    public static void main(String[] args) {
+        int[] intArray = {1, 2, 3, 4, 5};
+
+        IntStream intStream = Arrays.stream(intArray);
+        intStream.asDoubleStream().forEach(d->System.out.println(d));
+
+        System.out.println();
+
+        intStream = Arrays.stream(intArray);
+        intStream.boxed().forEach(obj->System.out.println(obj.intValue()));
+    }
+}
+```
