@@ -156,9 +156,9 @@ public class MapAndReduceExample {
         );
 
         double avg = studentList.stream()
-.mapToInt(Student::getScore)
-.average()
-.getAsDouble();
+          .mapToInt(Student::getScore)
+          .average()
+          .getAsDouble();
 
         System.out.println("평균 점수: " + avg);
     }
