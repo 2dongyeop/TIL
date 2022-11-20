@@ -140,12 +140,7 @@
 
 <img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/중간처리-최종처리.png" width = 700/>
 
-<br/>
-
-<details>
-<summary>예시 소스 코드</summary>
-<div markdown="1">
-
+#### 예제 코드
 ```java
 public class MapAndReduceExample {
     public static void main(String[] args) {
@@ -165,8 +160,6 @@ public class MapAndReduceExample {
 }
 ```
 
-</div>
-</details>
 
 <br/>
 
@@ -272,26 +265,30 @@ public class FromIntRangeExample {
 <br/>
 
 #### 예제 코드
-- 회원 목록에서 성별이 남성인 회원의 평균 나이 구하기
-  - 파이프라인을 자바 코드로 구현
-    ```java
-    Stream<Member> maleFemaleStream = list.stream();
-    Stream<Member> maleStream = maleFeamleStream.filter(m -> m.getSex() == Member.MALE);
-    IntStream ageStream = maleStream.mapToInt(Member :: getAge);
-    OptionalDouble optionalDouble = ageStream.average();
-    double ageAvg = optionalDouble.getAsDouble();
-    ```
+- 파이프라인을 자바 코드로 구현
+```java
+Stream<Member> maleFemaleStream = list.stream();
+Stream<Member> maleStream = maleFeamleStream.filter(m -> m.getSex() == Member.MALE);
+IntStream ageStream = maleStream.mapToInt(Member :: getAge);
+OptionalDouble optionalDouble = ageStream.average();
+double ageAvg = optionalDouble.getAsDouble();
+```
 
 <br/>
 
-  - 로컬 변수를 생략하고 연결하여 만든 파이프라인
-      ```java
-      double ageAvg = list.stream()     //오리지날 스트림
-        .filter(m -> m.getSex() == Member.MALE)  //중간 처리 스트림
-        .mapToInt(Member :: getAge)     //중간 처리 스트림
-        .average()                      //최종 처리 스트림
-        .getAsDouble();
-    ```
+- 로컬 변수를 생략하고 연결하여 만든 파이프라인
+```java
+/*
+회원 목록에서 성별이 남성인 회원의 평균 나이 구하기
+*/
+
+double ageAvg = list.stream()     //오리지날 스트림
+  .filter(m -> m.getSex() == Member.MALE)  //중간 처리 스트림
+  .mapToInt(Member :: getAge)     //중간 처리 스트림
+  .average()                      //최종 처리 스트림
+  .getAsDouble();
+```
+
 <br/>
 
 ### 중간 처리 메소드와 최종 처리 메소드
