@@ -678,3 +678,137 @@ public class MatchExample {
 ```
 
 <br/>
+
+<br/>
+
+## 🔥 9. 기본 집계
+- 집계(`Aggregate`)란?
+  - 최종 처리 기능으로 요소들을 처리해서 하나의 값으로 산출하는 것을 말한다.
+    - ex) 카운팅, 합계, 평균값, 최대값, 최소값 등
+  - 집계는 대량의 데이터를 가공해서 축소하는 리덕션(`Reduction`)이라고 볼 수 있다.
+
+<br/>
+
+### 스트림이 제공하는 기본 집계
+- 자바 8에서는 `java.util` 패키지에 `OptionalXXX`이 추가되었다.
+- 이들은 값을 저장하는 값 기반 클래스(`value-based class`)들로, 다음 절에서 나올 예정이다.
+
+|리턴타입	|메소드(매개변수)	|설명|
+|:---|:---|:---:|
+|long	|count()	|요소 개수|
+|OptionalXXX	|findFirst()	|첫번째 요소|
+|Optional<T>	|max(Compatator<T>)	|최대 요소|
+|OptionalXXX	|max()	|최대 요소|
+|Optional<T>	|min(Comparator<T>)	|최소 요소|
+|OptionalXXX	|min()	|최소 요소|
+|OptionalDouble|	average()	|요소 평균|
+|int, long, double|	sum()|	요소 총합|
+
+<br/>
+
+#### 예제 코드
+```java
+public class AggregateExample {
+    public static void main(String[] args) {
+        long count = Arrays.stream(new int[] {1, 2, 3, 4, 5})
+            .filter(n -> n % 2 == 0)
+            .count();
+        System.out.println("2의 배수 개수: " + count);
+        
+        long sum = Arrays.stream(new int[] {1, 2, 3, 4, 5})
+            .filter(n -> n % 2 == 0)
+            .sum();
+        System.out.println("2의 배수의 합: " + sum);
+        
+        int max = Arrays.stream(new int[] {1, 2, 3, 4, 5})
+            .filter(n -> n % 2 == 0)
+            .max()
+            .getAsInt();
+        System.out.println("최댓값: " + max);
+
+        int min = Arrays.stream(new int[] {1, 2, 3, 4, 5})
+            .filter(n -> n % 2 == 0)
+            .min()
+            .getAsInt();
+        System.out.println("최솟값: " + min);
+
+        int first = Arrays.stream(new int[] {1, 2, 3, 4, 5})
+            .filter(n -> n % 3 == 0)
+            .findFirst()
+            .getAsInt();
+        System.out.println("첫번째 3의 배수: " + first);
+    }
+}
+```
+
+<br/>
+
+### `Optional` 클래스
+- 이 클래스들은 저장하는 값의 타입만 다를 뿐 제공하는 기능은 거의 동일하다.
+  - 단, 단순히 집계 값만 저장하는 것이 아니다!
+    - 집계 값이 존재하지 않을 경우 디폴트 값을 설정할 수도 있고,
+    - 집계 값을 처리하는 `Consumer`도 등록할 수 있다.
+
+|리턴 타입 | 메소드(매개변수) | 설명|
+|:---:|:---:|:---:|
+|boolean|isPresent()|값이 저장되어 있는지 여부|
+|T|orElse(T)|값이 저장되어 있지 않을 경우 디폴트 값 지정|
+|double|orElse(double)|값이 저장되어 있지 않을 경우 디폴트 값 지정|
+|int|orElse(int)|값이 저장되어 있지 않을 경우 디폴트 값 지정|
+|long|orElse(long)|값이 저장되어 있지 않을 경우 디폴트 값 지정|
+|void|ifPresent(Consumer)|값이 저장되어 있지 않을 경우 Consumer에서 처리|
+|void|ifPresent(DoubleConsumer)|값이 저장되어 있지 않을 경우 Consumer에서 처리|
+|void|ifPresent(IntConsumer)|값이 저장되어 있지 않을 경우 Consumer에서 처리|
+|void|ifPresent(LongConsumer)|값이 저장되어 있지 않을 경우 Consumer에서 처리|
+
+<br/>
+
+- 컬렉션의 요소는 **동적으로 추가**되는 경우가 많다.
+  - 만약 컬렉션의 요소가 추가되지 않아 저장된 요소가 없을 경우는? → `NoSuchElementException` 발생
+    ```java
+    List<Integer> list = new ArrayList<>();
+    double avg = list.stream()
+      .mapToInt(Integer :: intValue)
+      .average()
+      .getAsDouble();
+    System.out.println("평균: " + avg);
+    ```
+
+<br/>
+
+- `NoSuchElementException`을 피하는 3가지 방법
+  - `Optional` 객체를 얻어 `isPresent()` 메소드로 평균값 여부를 확인
+    ```java
+    OptionalDouble optional = list.stream()
+      .mapToInt(Integer :: intValue)
+      .average();
+    if(optional.isPresent()) {
+      System.out.println("평균: " + optional.getAsDouble());
+    } else {
+      System.out.println("평균: 0.0");
+    }
+    ```
+  <br/>
+
+  - `orElse()` 메소드로 디폴트 값을 정해놓기
+    ```java
+    double avg = list.stream()
+      .mapToInt(Integer :: intValue)
+      .average()
+      .orElse(0.0);
+    System.out.println("평균: " + avg);
+    ```
+
+  <br/>
+
+  - `ifPresent()` 메소드로 평균값이 있을 경우에만 값을 이용하는 람다식 실행
+    ```java
+    list.stream()
+      .mapToInt(Integet :: intValue)
+      .average()
+      .ifPresent(a -> System.out.println("평균: " + a));
+    ```
+
+<br/>
+
+<br/>
