@@ -454,12 +454,129 @@ public class AsDoubleStreamAndBoxedExample {
         int[] intArray = {1, 2, 3, 4, 5};
 
         IntStream intStream = Arrays.stream(intArray);
-        intStream.asDoubleStream().forEach(d->System.out.println(d));
+        intStream.asDoubleStream().forEach(d -> System.out.println(d));
 
         System.out.println();
 
         intStream = Arrays.stream(intArray);
-        intStream.boxed().forEach(obj->System.out.println(obj.intValue()));
+        intStream.boxed().forEach(obj -> System.out.println(obj.intValue()));
     }
 }
 ```
+
+<br/>
+
+<br/>
+
+## 🔥 6. 정렬
+- 스트림은 요소가 최종 처리되기 전에 중간 단계에서 **요소를 정렬**해서 최종 처리 순서를 변경할 수 있다.
+
+<br/>
+
+
+|리턴 타입|메소드(매개변수)|설명|
+|:--:|:---:|:---:|
+|Stream<T>|sorted()|객체를 `Comparable` 구현 방법에 따라 정렬|
+|Stream<T>|sorted(Comparator<T>)|객체를 주어진 `Comparator`에 따라 정렬|
+|DoubleStream|sorted()|double 요소를 오름차순으로 정렬|
+|IntStream|sorted()|int 요소를 오름차순으로 정렬|
+|LongStream|sorted()|long 요소를 오름차순으로 정렬|
+
+<br/>
+
+- 객체 요소일 경우 : `Comparable`을 구현한 요소에서만 `sorted()` 메소드를 호출할 수 있다.
+  - 구현하지 않고 메소드를 호출하면 `ClassCastException`이 발생한다.
+    ```java
+    /* 점수를 기준으로 Student 요소를 오름차순으로 정렬 */
+    public class Student2 implements Comparable<Student> {
+        private String name;
+        private int score;
+
+        public Student2(String name, int score) {
+            this.name = name;
+            this.score = score;
+        }
+
+        public String getName() {
+            return name;
+        }
+        public int getScore() {
+            return score;
+        }
+
+        @Override
+        public int compareTo(Student2 o) {
+            return Integer.compare(score, o.score);
+        }
+    }
+    ```
+
+<br/>
+
+- 객체 요소가 `Comparable`을 구현한 상태에서 기본 비교(`Comparable`)로 정렬하는 3가지 방법
+  ```java
+  sorted();
+  sorted( (a, b) -> a.compareTo(b) );
+  sorted( Comparator.naturalOrder() );
+  ```
+
+<br/>
+
+- `Comparable`을 구현했지만, 기본 비교(`Comparable`)와 반대로 역순으로 정렬하는 2가지 방법
+  ```java
+  sorted( (a,b) -> b.compareTo(a) );
+  sorted( Comparator.reverseOrder() );
+  ```
+
+<br/>
+
+- 객체 요소가 `Comparable`을 구현하지 않았다면, `Comparator`를 매개값으로 갖는 `sorted()`를 호출하자.
+  - `Comparator`는 함수적 인터페이스이므로 다음과 같이 람다식으로 매개값을 작성할 수 있다.
+  - 중괄호 안에는 a와 b를 비교해서 a가 작으면 음수, 같으면 0, a가 크면 양수를 리턴하는 코드를 작성하면 된다.
+    ```java
+    sorted((a, b) -> { ... })
+    ```
+
+<br/>
+
+#### 예제 코드
+```java
+public class SortingExample {
+    public static void main(String[] args) {
+        IntStream intStream = Arrays.stream(new int[] {5, 3, 2, 1, 4});
+
+        /* 숫자 요소일 경우 오름차순으로 정렬 후 출력 */
+
+        intStream
+            .sorted()
+            .forEach(n->System.out.println(n + ","));
+        System.out.println();  //1,2,3,4,5,
+
+        List<Student2> studentList = Arrays.asList(
+            new Student2("홍길동", 30),
+            new Student2("신용권", 10),
+            new Student2("유미선", 20)
+        );
+
+        /* 객체 요소일 경우 기본 비교(Comparable) 방법을 이용해 오름차순으로 정렬 후 출력 */
+        studentList.stream()
+            .sorted()
+            .forEach(s->System.out.println(s.getScore() + ","));
+        System.out.println();   //10,20,30,
+
+        /* Comparator를 제공해 점수를 기준으로 내림차순으로 정렬 후 출력 */
+        studentList.stream()
+            .sorted(Comparator.reverseOrder())
+            .forEach(s->System.out.println(s.getScore() + ","));
+        System.out.println();   //30,20,10,
+    }
+}
+```
+
+<br/>
+
+<br/>
+
+
+
+
