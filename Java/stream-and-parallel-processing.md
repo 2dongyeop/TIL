@@ -577,6 +577,72 @@ public class SortingExample {
 
 <br/>
 
+## 🔥 7. 루핑
+- 루핑(looping)은 요소 전체를 반복하는 것을 말한다. 
+  - 루핑하는 메소드에는 `peek()`, `forEach()`가 있다.
 
+<br/>
 
+- 이 두 메소드는 루핑한다는 기능은 같지만 동작 방식이 다르다.
+  - `peek()` : 중간 처리 메소드
+  - `forEach()` : 최종 처리 메소드
 
+<br/>
+
+- `peek()`
+  - 중간 처리 단계에서 전체 요소를 루핑하면서 추가적인 작업을 하기 위해 사용한다.
+  - 최종 처리 메소드가 실행되지 않으면 지연되기 때문에 **반드시 최종 처리 메소드가 호출되어야 작동**한다. 
+    - 이는 위에서 말했듯 중간 처리 메소드이기 때문이다.
+
+  <br/>
+
+  - 동작하지 않는 예시  
+    ```java
+    intStream
+      .filter(a -> a % 2 == 0)
+      .peek(System.out::println);
+    ```
+
+  <br/>
+
+  - 정상 동작하는 예시
+    ```java
+    intStream
+      .filter(a -> a % 2 == 0)
+      .peek(System.out::println)
+      .sum()
+    ```
+
+<br/>
+
+- `forEach()`
+  - 최종 처리 메소드이기 때문에 파이프라인 마지막에 루핑하면서 요소를 하나씩 처리한다.
+  - 요소를 소비하는 최종 처리 메소드이므로 **다른 최종 메소드를 호출하면 안된다.**
+
+<br/>
+
+#### 예제 코드
+```Java
+public class LoopingExample {
+    public static void main(String[] args) {
+        int[] intArr = {1, 2, 3, 4, 5};
+
+        System.out.println("[peek()를 마지막으로 호출한 경우]");
+        Arrays.stream(intArr)
+            .filter(a->a%2==0)
+            .peek(n->System.out.println(n)); // 동작하지 않음
+
+        System.out.println("[최종 처리 메소드를 마지막에 호출한 경우]");
+        int total = Arrays.stream(intArr)
+            .filter(a->a%2==0)
+            .peek(n->System.out.println(n))  // 2 4
+            .sum();
+        System.out.println("총합: " + total); // 총합: 6
+
+        System.out.println("[forEach()를 마지막에 호출한 경우]");
+        Arrays.stream(intArr)
+            .filter(a->a%2==0)
+            .forEach(n->System.out.println(n)); // 2 4
+    }
+}
+```
