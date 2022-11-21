@@ -646,3 +646,35 @@ public class LoopingExample {
     }
 }
 ```
+<br/>
+
+<br/>
+
+## 🔥 8. 매칭
+- 스트림 클래스는 최종 처리 단계에서 요소들이 **특정 조건에 만족하는지 조사**할 수 있도록 메소드를 제공한다.
+  - `allMatch()` : **모든 요소**들이 매개값으로 주어진 `Predicate`의 **조건을 만족하는지** 조사
+  - `anyMatch()` : **최소한 한 개**의 요소가 매개값으로 주어진 `Predicate`의 **조건을 만족하는지** 조사
+  - `nonMatch()` : **모든 요소**들이 매개값으로 주어진 `Predicate`의 **조건을 만족하는지 않는지** 조사
+
+<br/>
+
+#### 예제 코드
+```java
+/* int[] 배열로부터 스트림을 생성하고, 요소들이 각각 특정 조건에 만족하는지를 조사한다. */
+public class MatchExample {
+    public static void main(String[] args) {
+        int[] intArr = {2, 4, 6};
+
+        boolean result = Arrays.stream(intArr).allMatch(a -> a % 2 == 0);
+        System.out.println("모두 2의 배수인가? " + result);
+
+        result = Arrays.stream(intArr).anyMatch(a -> a % 3 == 0);
+        System.out.println("하나라도 3의 배수가 있는가? " + result);
+
+        result = Arrays.stream(intArr).noneMatch(a -> a % 3 == 0);
+        System.out.println("3의 배수가 없는가? " + result);
+    }
+}
+```
+
+<br/>
