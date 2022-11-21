@@ -812,3 +812,46 @@ public class AggregateExample {
 <br/>
 
 <br/>
+
+## 🔥 10. 커스텀 집계
+- 스트림은 프로그램화해서 다양한 집계 결과물을 만들 수 있도록 `reduce()` 메소드를 제공한다.
+
+<br/>
+
+|인터페이스|	리턴타입|	메소드(매개변수)|
+|:---|:---|:---|
+|Stream|	Optional<T>|	reduce(BinaryOperator<T> accumulator)|
+|Stream	|T	|reduce(T identity, BinaryOperator<T> accumulator)|
+|IntStream	|OptionalInt	|reduce(IntBinaryOperator op)|
+|IntStream	|int	|reduce(int identity, IntBinaryOperator op)|
+|LongStream	|OptionalLong|	reduce(LongBinaryOperator op)|
+|LongStream	|long	|reduce(long identity, LongBinaryOperator op)|
+|DoubleStream	|OptionalDouble|	reduce(DoubleBinaryOperator op)|
+|DoubleStream	|double	|reduce(double identity, DoubleBinaryOperator op)|
+
+<br/>
+
+- 위 표에서 인터페이스 타입별로 두 번째 메소드를 통해 다음을 알 수 있다.
+  - 스트림에 요소가 없어 `NoSuchElementException`이 발생할 경우,
+  - 첫 번째 매개변수인 `identity`가 디폴트 값으로 리턴된다.
+
+<br/>
+
+- 코드를 통한 디폴트 값 차이 리뷰
+```java
+/* identity가 매개변수에 전달되지 않아, 요소가 없을 경우 예외 발생 */
+int sum = studentList.stream()
+  .map(Student::getScore)
+  .reduce((a, b) -> a + b)
+  .get();
+
+/* identity = 0으로 전달되어, 요소가 없을 경우 디폴트 값인 0을 리턴 */
+int sum = studentList.stream()
+  .map(Student::getScore)
+  .reduce(0, (a, b) -> a + b)
+  .get();
+```
+
+<br/>
+
+<br/>
