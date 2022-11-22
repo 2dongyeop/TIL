@@ -962,8 +962,7 @@ int sum = studentList.stream()
 - `collect()` 메소드는 수집하는 기능외에 컬렉션의 요소들을 **그룹핑해서 Map 객체를 생성하는 기능도 제공**한다. 
   - `collect()`를 호출할 때 Collectors의 정적 메소드가 리턴하는 Collectors를 매개값으로 대입하면 된다.
 
-
-<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/grouping-collector.png" width = 700/>
+  <img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/grouping-collector.png" width = 700/>
 
 - `groupingBy()` → 스레드에 안전하지 않은 Map을 생성
 - `groupingByConcurrent()` → 스레드에 안전한 ConcurrentMap을 생성
