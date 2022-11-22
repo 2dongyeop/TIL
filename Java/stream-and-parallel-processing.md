@@ -988,15 +988,14 @@ Map<Student.Sex, List<Student>> mapBySex = totalList.stream()
 
 #### 예제 코드
 ```java
-/* 학생들을 성별로 그룹핑하고, 같은 그룹의 학생들의 평균 점수를 구한 뒤
- 성별을 키로, 평균 점수를 값으로 갖는 Map을 생성 */
+/* 학생들을 성별로 그룹핑하고, 같은 그룹의 학생들의 평균 점수를 구한 뒤 성별을 키로, 평균 점수를 값으로 갖는 Map을 생성 */
 Map<Student.Sex, Double> mapBySex = totalList.stream()
-	.collect(
-			Collectors.groupingBy(
-					Student :: getSex,
-					Collectors.averagingDouble(Student :: getScore)
-			)
-	); 
+  .collect(
+    Collectors.groupingBy(
+      Student :: getSex,
+      Collectors.averagingDouble(Student :: getScore)
+    )
+); 
 ```
 
 <br/>
@@ -1045,6 +1044,8 @@ Map<Student.Sex, Double> mapBySex = totalList.stream()
 
 
 <img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/fork-join.png" width = 700/>
+
+<br/>
 
 동작 과정
 1. 병렬 스트림을 이용 → 런타임 시 프레임워크가 동작 
