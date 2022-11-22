@@ -855,3 +855,148 @@ int sum = studentList.stream()
 <br/>
 
 <br/>
+
+## 🔥 11절. 수집
+- 스트림은 요소들을 필터링/매핑한 후 요소들을 수집하는 최종 처리 메소드인 `collect()`를 제공한다.
+- 이 메소드를 이용하여 **필요한 요소들만 컬렉션으로 담을 수 있고**, 요소들을 그룹핑한 후 집계(리덕션)할 수 있다.
+
+<br/>
+
+### 필터링한 요소 수집
+|리턴 타입|메소드(매개 변수)|인터페이스|
+|:---:|:---:|:---:|
+|R|collect(Collector(T, A, R) collector|Stream|
+
+- 매개값인 Collector(수집기)는 어떤 요소를 어떤 컬렉션에 수집할 것인지를 결정한다.
+  - T는 요소, A는 누적기(accumulator), R은 요소가 저장될 컬렉션이다.
+  - 풀어쓰면, T 요소를 A 누적기가 R에 저장한다는 의미이다.
+
+<br/>
+
+`Collector`의 구현 객체는 아래와 같이 `Collectors` 클래스의 다양한 정적 메소드를 이용해서 얻을 수 있다.
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/Collctors-method.png" width = 700/>
+
+- 리턴값이 Collector를 보면 A(누적기)가 ?로 되어 있다.
+  - 이는 Collector가 R (컬렉션)에 T(요소)를 저장하는 방법을 알고 있어 A(누적기)가 필요 없기 때문이다. 
+
+<br/>
+
+> 여기서 **Map은 스레드에 안전하지 않고**, **ConcurrentMap은 스레드에 안전**하기 때문에, 
+>
+> 멀티 스레드 환경에서 사용하려면 ConcurrentMap을 얻는 것이 좋다.
+
+<br/>
+
+#### 예제 코드
+- 스트림을 자바 코드로 구현
+  ```java
+  /* 전체 학생 List에서 남학생들만 별도의 List로 수집 */
+  Stream<Student> totalStream = totalList.stream();
+  Stream<Student> maleStream = totalStream.filter(s->s.getSex() ==Student.Sex.MALE);
+  Collector<Student, ?, List<Student>> collector = Collectors.toList();
+
+  List<Student> maleList = maleStream.collect(collector);
+  ```
+
+<br/>
+
+- 위 코드를 변수를 생략하고 간단하게 작성
+  ```java
+  List<Student> maleList = totalList.stream()
+    .filter(s->s.getSex() == Student.Sex.MALE)
+    .collect(Collectors.toList());
+  ```
+
+<br/>
+
+<br/>
+
+### 사용자 정의 컨테이너에 수집하기
+- 이번에는 `List`, `Set`, `Map`과 같은 컬렉션이 아니라 사용자 정의 컨테이너 객체에 수집하는 방법이다.
+
+<br/>
+
+- 스트림은 요소들을 필터링, 또는 매핑해서 사용자 정의 컨테이너 객체에 수집할 수 있는 `collect()`를 제공한다.
+
+|인터페이스|	리턴타입	|메소드(매개변수)|
+|:---:|:---:|:---|
+|Stream	|R|	collect(Supplier<R>, BiConsumer<R, ?, super T>, BiConsumer<R, R>)|
+|IntStream	|R|	collect(Supplier<R>, ObjIntConsumer<R>, BiConsumer<R, R>)|
+|LongStream	|R|	collect(Supplier<R>, ObjLongConsumer<R>, BiConsumer<R, R>)|
+|DoubleStream	|R|	collect(Supplier<R>, ObjDoubleConsumer<R>, BiConsumer<R, R>)|
+
+- 위 표를 보면 아래와 같이 정리할 수 있다.
+  - 첫 번째 매개변수 `Supplier`는 요소들이 수집될 컨테이너 객체(R)를 생성하는 역할을 한다.
+    - 순차 처리(싱글 스레드) 스트림 → 단 한 번 `Supplier`가 실행되고 하나의 컨테이너 객체 생성
+    - 병렬 처리(멀티 스레드) 스트림 → 여러 번 `Supllier`가 실행되고 스레드 별 여러 컨테이너 객체 생성
+  - 두 번째 매개변수 `XXXConsumer`는 컨테이너 객체(R)에 요소(T)를 수집하는 역할을 한다.
+  - 세 번째 매개변수 `BiConsumer`는 컨테이너 객체(R)를 결합하는 역할을 한다.
+    - 순차 처리 스트림에서는 호출되지 않는다.
+    - 병렬 처리 스트림에서는 호출되어 스레드별로 생성된 컨테이너 객체를 결합해서 최종 컨테이너 객체를 완성한다.
+  
+  <br/>
+
+  - 리턴 타입 R은 요소들이 최종 수집된 컨테이너 객체이다.
+    - 순차 처리 스트림에서는 리턴 객체가 첫 번째 `Supplier`가 생성하지만,
+    - 병렬 처리 스트림에서는 최종 결합된 컨테이너 객체가 된다.
+
+<br/>
+
+#### 예제 코드
+- 스트림을 예제 코드로 구현
+  ```java
+  Stream<Student> totalStream = totalList.stream();
+  Stream<Student> maleStream = totalStream.filter(s-> s.getSex() ==Student.Sex.MALE);
+
+  Supplier<MaleStudent> supplier = () -> new MaleStudent();
+  BiConsumer<MaleStudent, Student> accumulator = (ms, s)-> ms.accumulate(s);
+  BiConsumer<MaleStudent, MaleStudent> combiner = (ms1, ms2) -> ms1.combine(ms2);
+
+  MaleStudent maleStudent = maleStream.collect(supplier, accumulator, combiner);
+  ```
+
+<br/>
+
+### 요소를 그룹핑해서 수집
+- `collect()` 메소드는 수집하는 기능외에 컬렉션의 요소들을 **그룹핑해서 Map 객체를 생성하는 기능도 제공**한다. 
+  - `collect()`를 호출할 때 Collectors의 정적 메소드가 리턴하는 Collectors를 매개값으로 대입하면 된다.
+
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/grouping-collector.png" width = 700/>
+
+- `groupingBy()` → 스레드에 안전하지 않은 Map을 생성
+- `groupingByConcurrent()` → 스레드에 안전한 ConcurrentMap을 생성
+
+<br/>
+
+#### 예제 코드
+```java
+/* 학생의 성별로 그룹핑하여 List를 생성한 후, 성별을 키로, 학생 List를 값으로 갖는다. */
+
+Map<Student.Sex, List<Student>> mapBySex = totalList.stream()
+	.collect(Collectors.groupingBy(Student :: getSex));
+```
+
+<br/>
+
+### 그룹핑 후 매핑 및 집계
+- `Collectors.groupingBy()` 메소드는 그룹핑 후, 매핑이나 집계를 할 수 있도록 두 번째 매개값으로 Collector를 가질 수 있다.
+
+  <img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/grouping-by.png" width = 700/>
+
+
+<br/>
+
+#### 예제 코드
+```java
+/* 학생들을 성별로 그룹핑하고, 같은 그룹의 학생들의 평균 점수를 구한 뒤
+ 성별을 키로, 평균 점수를 값으로 갖는 Map을 생성 */
+Map<Student.Sex, Double> mapBySex = totalList.stream()
+	.collect(
+			Collectors.groupingBy(
+					Student :: getSex,
+					Collectors.averagingDouble(Student :: getScore)
+			)
+	); 
+```
