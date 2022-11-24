@@ -875,7 +875,7 @@ int sum = studentList.stream()
 
 `Collector`의 구현 객체는 아래와 같이 `Collectors` 클래스의 다양한 정적 메소드를 이용해서 얻을 수 있다.
 
-<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/Collctors-method.png" width = 700/>
+<img src="https://github.com/2dongyeop/TIL/blob/main/Java/image/Collectors-method.png" width = 700/>
 
 - 리턴값이 Collector를 보면 A(누적기)가 ?로 되어 있다.
   - 이는 Collector가 R (컬렉션)에 T(요소)를 저장하는 방법을 알고 있어 A(누적기)가 필요 없기 때문이다. 
