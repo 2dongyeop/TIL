@@ -236,7 +236,7 @@
     FROM employee
   WHERE dno IN (SELECT deptno 
                   FROM department
-                  WHERE deptname IN ('영업', '개발'));
+                 WHERE deptname IN ('영업', '개발'));
   ```
 
 <br/>
@@ -260,8 +260,8 @@
     FROM customer
     WHERE EXISTS (SELECT *
                     FROM porder
-                WHERE order_date = '2022-03-15'
-                    AND porder.customer_id = customer.customer_id);
+                   WHERE order_date = '2022-03-15'
+                     AND porder.customer_id = customer.customer_id);
     ```
 
 <br/>
