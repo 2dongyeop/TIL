@@ -94,8 +94,8 @@
 - FROM 키워드와 함께 검색하고 싶은 속성이 있는 테이블의 이름을 나열한다.
 - 검색 결과는 테이블 형태로 반환된다.
     ```sql
-        SELECT [ALL | DISTINCT] 속성_리스트
-          FROM 테이블_리스트;
+    SELECT [ALL | DISTINCT] 속성_리스트
+      FROM 테이블_리스트;
     ```
 
 <br/>
@@ -103,8 +103,8 @@
 - `AS` 키워드를 이용해 결과 테이블에서 속성의 이름을 바꾸어 출력도 가능하다.
 - 새로운 이름에 공백이 포함되어 있으면 큰따옴표나 작은따옴표로 묶어주어야 한다.
     ```sql
-        SELECT [ALL | DISTINCT] 속성_리스트 AS 새로운_이름
-          FROM 테이블_리스트;   
+    SELECT [ALL | DISTINCT] 속성_리스트 AS 새로운_이름
+      FROM 테이블_리스트;   
     ```
 
 <br/>
@@ -113,8 +113,8 @@
 - SELECT 키워드와 함께 산술식을 제시할 수 있다.
 - 속성의 이름과 +,-,*,/ 등의 산술 연산자와 상수로 구성된다.
     ```sql
-        SELECT [ALL | DISTINCT] 속성_리스트 + 1000 AS 새로운_이름
-          FROM 테이블_리스트;   
+    SELECT [ALL | DISTINCT] 속성_리스트 + 1000 AS 새로운_이름
+      FROM 테이블_리스트;   
     ```
 
 <br/>
@@ -122,9 +122,9 @@
 #### 조건 검색
 - 조건을 만족하는 데이터만 검색한다.
     ```sql
-        SELECT [ALL | DISTINCT] 속성_리스트
-          FROM 테이블_리스트
-         WHERE 조건;
+    SELECT [ALL | DISTINCT] 속성_리스트
+      FROM 테이블_리스트
+     WHERE 조건;
     ```
 
 <br/>
@@ -186,13 +186,13 @@
 #### 그룹별 검색
 - `GROUP BY` 키워드를 이용해 특정 속성의 값이 같은 투플을 모아 그룹을 만들고, 그룹별로 검색한다.
 - `HAVING` 키워드를 함께 이용해 그룹에 대한 조건을 작성한다.
-```sql
-SELECT [ALL | DISTINCT] 속성_리스트
-  FROM 테이블_리스트
- WHERE 검색조건
- GROUP BY 속성_리스트
-HAVING 조건;
-```
+  ```sql
+  SELECT [ALL | DISTINCT] 속성_리스트
+    FROM 테이블_리스트
+   WHERE 검색조건
+   GROUP BY 속성_리스트
+  HAVING 조건;
+  ```
 
 <br/>
 
@@ -230,15 +230,14 @@ HAVING 조건;
 - 부속 질의문과 상위 질의문을 연결하는 연산자가 필요하다.
     - 단일 행 부속 질의문은 비교 연산자 사용 가능
     - 다중 행 부속 질의문은 비교 연산자 사용 불가능
-
-```sql
--- 영업부나 개발부에 근무하는 사원들의 이름을 검색하라
-SELECT empname 
-  FROM employee
- WHERE dno IN (SELECT deptno 
-                 FROM department
-                WHERE deptname IN ('영업', '개발'));
-```
+  ```sql
+  -- 영업부나 개발부에 근무하는 사원들의 이름을 검색하라
+  SELECT empname 
+    FROM employee
+  WHERE dno IN (SELECT deptno 
+                  FROM department
+                  WHERE deptname IN ('영업', '개발'));
+  ```
 
 <br/>
 
@@ -287,8 +286,8 @@ SELECT empname
 - `WHERE` 절에 제시된 조건을 만족하는 투플에 대해서만 속성 값을 수정한다.
     ```sql
     UPDATE 테이블_이름
-    SET 속성_이름1 = 값1, 속성_이름2 = 값2, ...
-    WHERE 조건;
+       SET 속성_이름1 = 값1, 속성_이름2 = 값2, ...
+     WHERE 조건;
     ```
 
 <br/>
