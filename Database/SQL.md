@@ -31,7 +31,7 @@
 - 아래 코드에서 [ ]의 내용은 생략이 가능하다.
     ```sql
     CREATE TABLE 테이블_이름 (
-        속성_이름 데이터_탕비 [NOT NULL] [DEFAULT 기본_값],
+        속성_이름 데이터_타입 [NOT NULL] [DEFAULT 기본_값],
         [PRIMARY KEY (속성_리스트)],
         [UNIQUE (속성_리스트)],
         [FOREIGN KEY (속성_리스트) REFERENCES 테이블_이름(속성_리스트)], 
@@ -46,28 +46,31 @@
 - 새로운 속성의 추가
     ```sql
     ALTER TABLE 테이블_이름
-        ADD 속성_이름 데이터_타입 [NOT NULL] [DEFAULT 기본_값];
+      ADD 속성_이름 데이터_타입 [NOT NULL] [DEFAULT 기본_값];
     ```
 
 <br/>
 
 - 기존 속성의 삭제
     ```sql
-    ALTER TABLE 테이블_이름 DROP COLUMN 속성_이름;
+    ALTER TABLE 테이블_이름 
+     DROP COLUMN 속성_이름;
     ```
 
 <br/>
 
 - 새로운 제약 조건의 추가
     ```sql
-    ALTER TABLE 테이블_이름 ADD CONSTRAINT 제약조건_이름 제약조건_내용;
+    ALTER TABLE 테이블_이름 
+      ADD CONSTRAINT 제약조건_이름 제약조건_내용;
     ```
 
 <br/>
 
 - 기존 제약조건의 삭제
     ```sql
-    ALTER TABLE 테이블_이름 DROP CONSTRAINT 제약조건_이름;
+    ALTER TABLE 테이블_이름 
+     DROP CONSTRAINT 제약조건_이름;
     ```
 
 <br/>
@@ -163,7 +166,7 @@
     SELECT [ALL | DISTINCT] 속성_리스트
       FROM 테이블_리스트
      WHERE 조건
-     ORDER BY 속성_리스트 [ASC | DESC]
+     ORDER BY 속성_리스트 [ASC | DESC];
     ```
 
 <br/>
@@ -234,9 +237,9 @@
   -- 영업부나 개발부에 근무하는 사원들의 이름을 검색하라
   SELECT empname 
     FROM employee
-  WHERE dno IN (SELECT deptno 
-                  FROM department
-                 WHERE deptname IN ('영업', '개발'));
+   WHERE dno IN (SELECT deptno 
+                   FROM department
+                  WHERE deptname IN ('영업', '개발'));
   ```
 
 <br/>
@@ -257,11 +260,11 @@
     ```sql
     -- 2022년 3월 15일에 제품을 주문한 고객의 고객이름을 검색하시오
     SELECT customer_name
-    FROM customer
-    WHERE EXISTS (SELECT *
-                    FROM porder
-                   WHERE order_date = '2022-03-15'
-                     AND porder.customer_id = customer.customer_id);
+      FROM customer
+     WHERE EXISTS (SELECT *
+                     FROM porder
+                    WHERE order_date = '2022-03-15'
+                      AND porder.customer_id = customer.customer_id);
     ```
 
 <br/>
