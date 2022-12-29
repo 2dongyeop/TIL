@@ -41,6 +41,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [시스템 콜](https://github.com/2dongyeop/TIL/blob/main/OS/system-call.md)
     - ### Operating System Concepts 10th
       - [chapter 01. Introduction](https://github.com/2dongyeop/TIL/blob/main/OS/introduction.md)
+      - [chapter 02. Structure](https://github.com/2dongyeop/TIL/blob/main/OS/operating-system-structure.md)
 
 <br/>
 
