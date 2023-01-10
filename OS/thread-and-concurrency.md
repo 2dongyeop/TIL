@@ -708,3 +708,50 @@
 <br/>
 
 <br/>
+
+## 💡 운영체제 사례
+
+### Windows 스레드
+
+- Windows 응용들은 프로세스 형태로 실행되며, 이들 각 프로세스는 한 개 또는 그 이상의 스레드를 가진다.
+    - Windows 스레드의 일반적인 구성 요소는 아래와 같다.
+        - 각 스레드를 유일하게 지목하는 스레드 ID
+        - 처리기의 상태를 나타내는 레지스터 집합
+        - 프로그램 카운터
+        - 사용자 모드에서 실행될 때 필요한 사용자 스택, 커널 모드에서 실행될 때 필요한 커널 스택
+        - 실행 시간 라이브러리와 동적 링크 라이브러리(DDL) 등이 사용하는 개별 데이터 저장 영역
+
+<br/>
+
+<br/>
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/Windows-thread.png" width = 600/>
+
+- 레지스터 집합, 스택, 개별 데이터 저장 영역들은 그 스레드의 문맥으로 불린다.
+    - 스레드의 주요 자료구조는 다음과 같다.
+        - **ETHREAD** - 실행 스레드 블록(`executive thread block`)
+        - **KTHREAD** - 커널 스레드 블록(`kernel thread block`)
+        - **TEB** - 스레드 환경 블록(`thread environment block`)
+
+<br/>
+
+<br/>
+
+### Linux 스레드
+
+- 리눅스는 아래 두 가지 기능을 지원한다.
+    - `fork()` : 프로세스를 복제하는 기능
+    - `clone()` : 스레드를 생성할 수 있는 기능
+    
+    ***→ 그러나, Linux는 프로세스와 스레드를 구별하지 않는다!***
+    
+    → 프로그램 내의 제어 흐름을 나타내기 위해 ***태스크***라는 용어를 사용한다!
+    
+
+<br/>
+
+<br/>
+
+- `clone()` 이 호출될 때 부모와 자식 태스크가 자료구조를 얼마나 공유할 지 결정하는 플래그는 아래와 같다.
+
+    <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/Linux-flag.png" width = 600/>    
