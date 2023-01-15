@@ -13,6 +13,14 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 <br/>
 
 ## 분류
+- ## 회고록
+    - [ep 0. 블로그의 시작](https://velog.io/@dongvelop/ep-0.-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%9D%98-%EC%8B%9C%EC%9E%91)
+    - [ep 1. 첫 회고록(feat. 슈퍼주니어 개발자)](https://velog.io/@dongvelop/%EC%8A%88%ED%8D%BC%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%B2%AB-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
+    - [ep 2. 11월 회고록](https://velog.io/@dongvelop/ep-2.-11%EC%9B%94-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
+    - [ep 3. 3학년을 마치고 작성해보는 12월 회고록](https://velog.io/@dongvelop/ep-3.-3%ED%95%99%EB%85%84%EC%9D%84-%EB%A7%88%EC%B9%98%EA%B3%A0-%EC%9E%91%EC%84%B1%ED%95%B4%EB%B3%B4%EB%8A%94-12%EC%9B%94-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
+
+<br/>
+
 - ## Java
     - [예외 처리](https://github.com/2dongyeop/TIL/blob/main/Java/exception-handling.md)
     - [멀티 스레드](https://github.com/2dongyeop/TIL/blob/main/Java/thread.md)
