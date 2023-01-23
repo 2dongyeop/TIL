@@ -275,3 +275,53 @@
 <br/>
 
 <br/>
+
+## 💡 Mutex Locks
+
+- Mutex 락이란?
+    - 임계구역을 보호하고, 경쟁 조건을 방지하기 위해 사용한다.
+    - `available` 이라는 불린 변수를 이용해 락의 가용 여부를 표시한다.
+    - 락이 가용하면? → `acquire()` 호출!
+
+<br/>
+
+<br/>
+
+- 동작 방식
+    
+    <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/mutex.png" width = 600/>
+    
+
+    ```c
+    acquire() {
+            while (!available)
+                    ; /* busy wait */
+            available = false;
+    }
+    ```
+
+    ```c
+    release() {
+            available = true;
+    }
+    ```
+
+<br/>
+
+<br/>
+
+- ***뮤텍스 락의 단점은 바쁜 대기(`busy waiting`)를 해야 한다는 것이다.***
+    - 한 프로세스가 임계구역에 있는 동안 임계구역에 진입하려는 다른 프로세스들은 `acquire()` 함수를 호출하는 반복문을 계속 실행한다.
+    - 이는 다중 프로그래밍 시스템에서 **CPU 낭비**로 볼 수 있다.
+
+<br/>
+
+- 스핀락(`spinlock`)이란?
+    - 위에 나온 mutex 락이 해당되는 유형으로, 락을 사용할 수 있을 때까지 프로세스가 회전하는 구조
+    - 프로세스가 락을 기다려야하고, 문맥 교환에 상당한 시간이 소요될 때 ***문맥 교환이 필요로 하지 않는
+    장점***이 있다!
+
+<br/>
+
+<br/>
+
