@@ -57,6 +57,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
       - [chapter 03. Process](https://github.com/2dongyeop/TIL/blob/main/OS/process.md)
       - [chapter 04. Thread & Concurrency](https://github.com/2dongyeop/TIL/blob/main/OS/thread-and-concurrency.md)
       - [chapter 05. CPU Scheduling](https://github.com/2dongyeop/TIL/blob/main/OS/OS-CPU-scheduling.md)
+      - [chapter 06. Synchronization tools](https://github.com/2dongyeop/TIL/blob/main/OS/synchronization-tools.md)
 
 <br/>
 
