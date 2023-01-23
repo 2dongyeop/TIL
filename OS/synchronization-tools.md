@@ -412,7 +412,130 @@ signal(semaphore *S) {
 }
 ```
 
----
+
+<br/>
+
+<br/>
+
+## 💡 모니터
+
+> 세마포가 프로세스 간의 동기화를 위해 편리하고 효율적으로 쓰일 수 있지만, 여전히 잘못 사용하면 발견하기 어려운 *타이밍 오류*를 야기할 수 있다.
+>
+>따라서 간단한 동기화 도구를 통합해 **고급 언어 구조물을 제공**하는 전략이 나왔고, **모니터**형이 이에 해당된다.
+> 
+
+<br/>
+
+<br/>
+
+### 모니터 사용법
+
+- 추상화된 데이터 형(ADT)은 데이터와 이 데이터를 조작하는 함수들의 집합을 하나의 단위로 묶는다.
+    - *이때, 함수의 구현은 ADT의 특정 구현과는 독립적이다!*
+
+<br/>
+
+<br/>
+
+- *모니터 형*이란?
+    - 모니터 내부에서 상호 배제가 보장되는 프로그래머가 정한 일련의 연산자 집합을 포함하는 ADT이다.
+    - 또한, 여기에 포함된 변수들의 값은 인스턴스의 상태를 정의한다.
+
+<br/>
+
+<br/>
+
+- 모니터 구조물은 항상 하나의 프로세스만 모니터 안에서 활성화되도록 보장한다.
+    - *프로그래머는 동기화 제약 조건을 명시적으로 코딩할 필요가 없다!*
+
+<br/>
+
+<br/>
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/monitor1.png" width = 600/>
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/monitor2.png" width = 600/>
+
+<br/>
+
+<br/>
+
+### 세마포를 이용한 모니터 구현
+
+- 모니터 구현 시 `signal-and-wait` 기법을 사용한다.
+    
+    ```c
+    semaphore mutex; // initially = 1
+    semaphore next; // initially = 0
+    int next_count = 0; // number of processes waiting inside the monitor
+    
+    // 외부 프로세서 F
+    wait(mutex);
+    	...
+    	body of F
+    	...
+    
+    if (next_count > 0)
+    	signal(next);
+    else
+    	signal(mutex);
+    ```
+    
+
+<br/>
+
+<br/>
+
+- 조건 변수를 세마포로 구현하는 방법
+    - 조건 x마다 x_sem이라는 이진 세미포와 x_count라는 정수형 변수를 도입한다.
+
+        ```c
+        semaphore x_sem; // initially = 0
+        int x_count = 0;
+
+        // x.wait() 연산
+
+        x_count++;
+        if (next_count > 0)
+                signal(next);
+        else
+                signal(mutex);
+        wait(x_sem);
+        x_count--;
+        ```
+
+        <br/>
+
+        ```c
+        // x.signal() 연산
+        if (x_count > 0) {
+                next_count++;
+                signal(x_sem);
+                wait(next);
+                next_count--;
+        }
+        ```
+
+<br/>
+
+<br/>
+
+### 모니터 내에서 프로세스 수행 재개
+
+- 모니터 안에서 프로세스가 수행 재개되는 순서로 주제를 전환한다.
+    - 일시중지 된 프로세스가 여럿 있을 때, 어느 프로세스가 재수행 될 지 어떻게 결정할까?
+    - → 주로 아래와 가은 형식의 `confitional-wait` 구조물을 사용한다.
+        
+        ```c
+        x.wait(c);
+        ```
+        
+
+<br/>
+
+- 위에서 c는 정수 수식이고, 이 수식은 wait() 연산이 호출될 때 값이 계산된다.
+    - c의 값은 **우선순위 번호**라 불리며, 일시 중지되는 프로세스의 이름과 함께 저장된다.
+
 
 <br/>
 
