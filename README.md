@@ -37,6 +37,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [Wrapper class](https://github.com/2dongyeop/TIL/blob/main/Java/wrapper.md)
     - [Call by Value vs Call by Reference](https://github.com/2dongyeop/TIL/blob/main/Java/call-by.md)
     - [StringBuffer vs StringBuilder](https://github.com/2dongyeop/TIL/blob/main/Java/stringbuilder-and-stringbuffer.md)
+    - [객체지향의 사실과 오해](https://github.com/2dongyeop/TIL/blob/main/Java/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98%20%EC%82%AC%EC%8B%A4%EA%B3%BC%20%EC%98%A4%ED%95%B4.pdf)
     - ### Modern Java in Action
         - [chapter 1. 자바 8, 9, 10, 11 : 무슨 일이 일어나고 있는가?](https://leedongyeop.notion.site/chapter-1-8-9-10-11-d4000ec0f4e8429c9324b7cdc309f048)
         - [chapter 2. 동작 파라미터화 코드 전달하기](https://leedongyeop.notion.site/chapter-2-d1f80eb20a204fe68649f94d194b4cf0)
