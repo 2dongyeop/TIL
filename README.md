@@ -94,6 +94,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [REST-API](https://github.com/2dongyeop/TIL/blob/main/Network/REST-API.md)
     - ### 모든 개발자를 위한 HTTP 웹 지식
       - [인터넷 네트워크](https://leedongyeop.notion.site/f78f722c27c54ec2ad3ecd3bc08c7eba)
+      - [URI와 웹브라우저 요청 흐름](https://leedongyeop.notion.site/URI-6558ac065d5543318c88c3f39f794bdb)
 
 <br/>
 
