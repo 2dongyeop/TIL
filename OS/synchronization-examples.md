@@ -509,3 +509,220 @@
 <br/>
 
 <br/>
+
+## 💡 Java에서의 동기화 
+
+### Java 모니터
+
+> Java는 스레드 동기화를 위한 모니터와 같은 병생성 기법을 제공한다.
+> 
+> - `BoundedBuffer` 클래스는 생산자와 소비자 문제의 해결안을 구현한다.
+
+<br/>
+
+<br/>
+
+- `BoundedBuffer` 클래스
+    
+    <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/BoundedBuffer.png" width = 600/>
+    
+
+<br/>
+
+<br/>
+
+- `synchronized` 메소드를 호출하려면?
+    - → BoundedBuffer의 객체 인스턴스와 연결된 락을 소유해야 한다.
+
+<br/>
+
+<br/>
+
+- 다른 스레드가 이미 락을 소유했다면?
+    - → 객체의 락에 설정된 **진입 집합**(entry set)에 추가된다.
+    - 이 진입 집합은 락이 가용해지기를 기다리는 스레드 집합이다.
+        
+        <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/entry-set.png" width = 600/>
+        
+
+<br/>
+
+<br/>
+
+> 락을 갖는 것 외에도 모든 객체는 스레드 집합으로 구성된 **대기 집합**과 연결됨을 알고 있자!
+> 
+
+<br/>
+
+<br/>
+
+- 전체 코드
+    
+    ```java
+    /* Producers call this method */
+    public synchronized void insert(E item) {
+    		while (count == BUFFER SIZE) { 
+    				try {
+    						wait(); //버퍼가 가득 차면 호출
+    				}catch (InterruptedException ie) {}
+    		}
+    
+    		buffer[in] = item;
+    		in = (in + 1) % BUFFER SIZE; 
+    		count+;
+    		notify();
+    }
+    
+    <br/>
+
+    /* Consumers call this method */ 
+    public synchronized E remove() {
+    		E item;
+    		while (count == 0) { 
+    				try {
+    						wait();
+    				}
+    		}catch (InterruptedException
+    
+    		item = buffer[out];
+    		out = (out + 1) % BUFFER SIZE; 
+    		count--;
+    
+    		notify();
+    		return item;
+    }
+    ```
+    
+
+<br/>
+
+<br/>
+
+### 재진입 락
+
+> API에서 사용 가능한 가장 간단한 락 기법은 **ReentrantLock**이다.
+> 
+> - 이는 여러가지 면에서 synchronized 명령문처럼 작동한다.
+> - 단일 스레드가 소유하며, 공유 자원에 대한 상호 배타적 액세스를 제공하는 데 사용된다.
+
+<br/>
+
+<br/>
+
+- `ReentrantLock`은 ***공정성*** 매개변수 설정과 같은 몇 가지 추가 기능을 제공한다.
+    - 이 공정성은 오래 기다린 스레드에 락을 줄 수 있는 설정이다.
+
+<br/>
+
+<br/>
+
+- 코드
+    - 락을 사용할 수 있거나 `lock()` 을 호출한 스레드가 이미 락을 소유한 경우 → **재진입**
+    
+    ```java
+    Lock key = new ReentrantLock();
+    
+    key.lock(); 
+    try {
+    		/* critical section */
+    		//예외가 발생하면 락이 해제되는 것을 보장
+    }
+    finally {
+    		key.unlock(); 
+    }
+    ```
+    
+
+<br/>
+
+<br/>
+
+> `ReentrantLock` 은 상호 배제를 제공하지만 여러 스레드가 공유 데이터를 읽기만 할 때에는 너무 보수적인 전략일 수 있다.
+이를 위해 Java API는 `ReentrantReadWriteLock` 을 제공한다.
+> 
+
+<br/>
+
+<br/>
+
+### 세마포
+
+- 상호 배제를 위해 세마포를 사용하는 방법
+    
+    ```java
+    Semaphore sem = new Semaphore(1);
+    
+    try {
+    		sem.acquire();
+    		/* critical section */
+    }
+    catch (InterruptedException ie) { } 
+    finally {
+    		sem.release(); //세마포가 반드시 해제되도록 finally 절 안에 작성
+    }
+    ```
+    
+
+<br/>
+
+<br/>
+
+### 조건 변수
+
+> 조건 변수는 wait() 및 notify() 메소드와 유사한 기능을 제공한다.
+따라서 상호 배제를 제공하려면 조건 변수를 재진입 락과 연관시켜야 한다.
+> 
+
+<br/>
+
+<br/>
+
+- 초기 과정
+    - 먼저 ReentrantLock을 생성 후 조건 변수를 생성
+    
+    ```java
+    Lock key = new ReentrantLock();
+    Condition condVar = key.newCondition();
+    ```
+    
+
+<br/>
+
+<br/>
+
+- Java 조건 변수를 이용한 예제
+    
+    ```java
+    /* threadNumber is the thread that wishes to do some work */ 
+    public void doWork(int threadNumber) {
+    		lock.lock();
+    
+    		try {
+    				/**
+    	      * If it’s not my turn, then wait
+    	      * until I’m signaled.
+    	      */
+    				if (threadNumber != turn) 
+    						condVars[threadNumber].await();
+    
+    				/**
+    	      * Do some work for awhile ...
+    	      */
+    	     /**
+    
+    	      * Now signal to the next thread.
+    	      */
+    		    turn = (turn + 1) % 5;
+    				condVars[turn].signal();
+    		}
+    		catch (InterruptedException ie) { } 
+    		finally {
+    	     lock.unlock();
+    		}
+    }
+    ```
+
+
+<br/>
+
+<br/>
