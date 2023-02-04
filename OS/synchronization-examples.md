@@ -389,3 +389,123 @@
 <br/>
 
 <br/>
+
+## 💡 POSIX 동기화 
+
+### POSIX mutex 락
+
+> Pthreads에서 사용할 수 있는 기본적인 동기화 기법을 대표한다.
+> 
+> - 이는 코드의 임계구역을 보호하기 위해 사용된다.
+> - 즉, 스레드는 임계구역에 진입하기 전에 락을 획득하고 임계구역에서 나갈 때 락을 방출한다.
+
+<br/>
+
+<br/>
+
+- Mutex 코드 예시 일부
+    
+    ```c
+    #include <pthread.h>
+    pthread mutex t mutex;
+    
+    /* create and initialize the mutex lock */
+    pthread mutex init(&mutex,NULL);
+    
+    /* acquire the mutex lock */ 
+    pthread mutex lock(&mutex);
+    
+    /* critical section */
+    
+    /* release the mutex lock */
+    pthread mutex unlock(&mutex);
+    ```
+    
+
+<br/>
+
+<br/>
+
+### POSIX 세마포
+
+> POSIX는 기명(`named`)과 무명(`un-named`)의 두 유형의 세마포를 명기하고 있다.
+> 
+> - 기본적으로 이 두가지는 매우 유사하지만 프로세스 간에 생성 및 공유되는 방식이 다르다.
+
+<br/>
+
+<br/>
+
+- 기명 세마포 코드
+    - `sem_open()` : POSIX 기명 세마포를 생성하고 여는데 사용
+    
+    ```c
+    #include <semaphore.h>
+    sem t *sem;
+    
+    /* Create the semaphore and initialize it to 1 */
+    sem = sem open("SEM", O CREAT, 0666, 1);
+    
+    /* acquire the semaphore */ 
+    sem wait(sem);
+    
+    /* critical section */
+    
+    /* release the semaphore */
+    sem post(sem);
+    ```
+    
+    - ***장점 : 여러 관련 없는 프로세스가 세마포 이름만 참조하여 동기화 기법으로 쉽게 사용 가능하다!***
+
+<br/>
+
+<br/>
+
+- 무명 세마포 코드
+    
+    ```c
+    #include <semaphore.h> 
+    sem t sem;
+    
+    /* Create the semaphore and initialize it to 1 */ 
+    sem init(&sem, 0, 1);
+    
+    /* acquire the semaphore */ 
+    sem wait(&sem);
+    
+    /* critical section */
+    
+    /* release the semaphore */ 
+    sem post(&sem);
+    ```
+    
+
+<br/>
+
+<br/>
+
+### POSIX 조건 변수
+
+> Pthread의 조건 변수는 pthread_cond_t 데이터 유형을 사용하고, pthread_cond_init()을 사용해 초기화한다.
+> 
+
+- 코드
+    
+    ```c
+    pthread mutex t mutex; 
+    pthread cond t cond var;
+    
+    pthread mutex init(&mutex,NULL); 
+    pthread cond init(&cond var,NULL);
+    
+    pthread mutex lock(&mutex); 
+    while (a != b)
+    		pthread cond wait(&cond var, &mutex); 
+    
+    pthread mutex unlock(&mutex);
+    ```
+
+
+<br/>
+
+<br/>
