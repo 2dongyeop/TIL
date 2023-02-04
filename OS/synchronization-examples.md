@@ -302,3 +302,90 @@
 <br/>
 
 <br/>
+
+## 💡 커널 안에서의 동기화 
+
+### Windows의 동기화
+
+> Windows는 커널 외부에서 스레드를 동기화하기 위해 **dispatcher** 객체를 제공한다.
+> 
+> - 스레드는 이 객체를 사용해 mutex락, 세마포, event 등을 포함한 다양한 기법에 맞추어 동기화한다.
+> - Event는 조건 변수와 유사하다! → 기다리는 조건이 만족하면 스레드에 통지하는 역할
+
+<br/>
+
+<br/>
+
+- Dispatcher 객체는 `signaled` 상태 혹은 `nonsignaled` 상태이다.
+    - `signaled` : 객체가 사용 가능하고 그 객체를 얻을 때 그 스레드가 봉쇄되지 않음.
+    - `nonsignaled` : 객체가 사용할 수 없고, 그 객체를 얻으려고 시도하면 스레드가 봉쇄됨.
+
+<br/>
+
+<br/>
+
+<img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/mutex-dispatcher.png" width = 600/>
+
+<br/>
+
+<br/>
+
+> Dispatcher 객체의 상태와 스레드 상태 간에는 관련성이 있다.
+> 
+> - 스레드가 `nonsignaled` 상태에 있는 dispatcher 객체 때문에 봉쇄되면 그 스레드의 상태는 준비로부터 대기 상태로 바뀌고 그 스레드는 그 객체의 대기 큐에 넣어지게 된다.
+> - 추후 dispatcher 객체의 상태가 `signaled` 상태로 바뀌면 커널은 그 객체를 기다리는 스레드가 있는지 여부를 알아낸다.
+
+<br/>
+
+<br/>
+
+- **Critical-section** 객체란?
+    - 커널의 개입 없이 획득하거나 방출할 수 있는 사용자 모드 mutex이다.
+    - `critical-section` 객체는 커널 mutex가 객체에 대한 경쟁이 발생할 때만 할당되기 때문에 효율적이다! → 실제로 CPU 절약이 상당히 좋아진다!
+
+<br/>
+
+<br/>
+
+### Linux의 동기화
+
+> Linux는 커널 안에서 동기화할 수 있는 많은 다른 기법을 제공한다.
+> 
+> - 가장 간단한 기법은 원자적 정수를 이용하는 것이다.
+
+<br/>
+
+<br/>
+
+- 아래 코드는 다양한 원자적 연산을 수행한 효과이다.
+    
+    <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/atomic-operation.png" width = 600/>
+    
+
+<br/>
+
+<br/>
+
+- 원자적 정수는 counter(정수형 변수)가 갱신되어야 하는 상황에서 특히 효율적이다!
+    - 왜냐면 원자적 연산을 락 기법을 사용할 때는 오버헤드가 필요하지 않기 때문!
+
+<br/>
+
+<br/>
+
+- Linux 커널은 커널 안에서의 락킹을 위해 스핀락과 세마포 및 두 락의 reader-writer 버전도 제공한다.
+    - SMP 기계에서는 기본적인 락킹 기법은 스핀락이다.
+    - 간단하게 요약하면 아래와 같다.
+        
+        <br/>
+
+        <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/Linux-smp.png" width = 600/>
+        
+        - Linux 커널에서 스핀락과 mutex 락은 ***재귀적이지 않다!***
+            - 즉, 스레드가 이러한 락 중 하나를 획득했다면?
+            - → 락을 해제하지 않고는 같은 락을 다시 획득할 수 없다.
+
+
+<br/>
+
+<br/>
