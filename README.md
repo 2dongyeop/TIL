@@ -100,6 +100,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
       - [URI와 웹브라우저 요청 흐름](https://leedongyeop.notion.site/URI-6558ac065d5543318c88c3f39f794bdb)
       - [HTTP 기본](https://leedongyeop.notion.site/HTTP-41ea18cde1b742629014d785f301794b)
       - [HTTP 메서드](https://leedongyeop.notion.site/HTTP-f3c37081f85b4009bfae4d12c3c893fa)
+      - [HTTP 메서드 활용](https://leedongyeop.notion.site/HTTP-3e835214ef7d406a8c6e8def89145818)
 
 <br/>
 
