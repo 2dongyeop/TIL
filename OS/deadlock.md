@@ -50,3 +50,58 @@
 
 <br/>
 
+## 💡 다중 스레드 응용에서의 교착 상태 _Deadlock in Multithreaded Applications
+
+> POSIX mutex 락을 사용해 다중 스레드 Pthread 프로그램에서 어떻게 교착 상태가 발생할 수 있는지 알아보자.
+> 
+
+- 두 mutex 락이 있다면, 아래와 같은 코드 예제에 의해 생성되고 초기화된다.
+    
+    ```cpp
+    pthread_mutex_t first_mutex;
+    pthread_mutex_t second_mutex;
+    
+    pthread_mutex_init(&first_mutex, NULL);
+    pthread_mutex_init(&second_mutex, NULL);
+    ```
+        
+    <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/deadlock-example.png" width = 500/>
+    
+
+<br/>
+
+<br/>
+
+- 위 예제에서 thread_one이 first_mutex 락을 획득하고, thread_two가 second_mutex를 획득하면?
+    - 교착 상태가 가능하다.
+    - 단, thread_two가 락을 획득하려고 시도하기 전에 thread_one이 뮤텍스 락 두개를 방출한다면?
+        → 교착 상태는 발생하지 않는다!
+        
+
+<br/>
+
+<br/>
+
+### 라이브락
+
+> 라이브락(`livelock`)이란?
+> 
+> - 또 다른 형태의 라이브니스 장애로, 교착 상태와 유사하다.
+> - 둘 다 두 개  이상의 스레드가 진행되는 것을 방해하지만 진행할 수 없는 이유가 서로 다르다.
+> - 교착상태 : 어떤 스레드 집합의 모든 스레드가 이벤트를 기다리면서 봉쇄된다.
+> - 라이브락 : 스레드가 실패한 행동을 계속해서 시도할 때 발생한다.
+>     - ex) 복도에서 한사람은 오른쪽으로 움직이고, 반대편 사람은 왼쪽으로 움직여 서로 방해하는 상태
+
+<br/>
+
+<br/>
+
+- 라이브락은 일반적으로 스레드가 실패한 작업을 동시에 재시도할 때 발생한다.
+    - 따라서 일반적으로 각 스레드가 실패한 행동을 재시도하는 시간을 무작위로 정하면 회피할 수 있다.
+    - 이 방법은 정확히 네트워크 충돌이 발생할 때 Ethernet 네트워크가 취하는 접근법이다.
+    - 충돌이 발생한 직후에 퍀시을 재전송하려고 시도하는 대신, 충돌한 호스트는 재전송을 시도하기 전에 임의의 시간 동안 **한 발 뒤로 물러난다.**
+
+
+<br/>
+
+<br/>
