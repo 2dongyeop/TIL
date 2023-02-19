@@ -110,3 +110,8 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [SQL(feat. DDL&DML)](https://github.com/2dongyeop/TIL/blob/main/Database/SQL.md)
     - [무결성 제약조건](https://github.com/2dongyeop/TIL/blob/main/Database/Integrity-Constraint.md)
     - [함수 종속과 정규화](https://github.com/2dongyeop/TIL/blob/main/Database/normalization.md)
+
+<br/>
+
+- ## Design-pattern
+  - [도메인 모델 패턴 vs 트랜잭션 스크립트 패턴](https://velog.io/@dongvelop/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%AA%A8%EB%8D%B8-%ED%8C%A8%ED%84%B4%EA%B3%BC-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%8C%A8%ED%84%B4)
