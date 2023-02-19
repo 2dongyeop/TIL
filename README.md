@@ -63,6 +63,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
       - [chapter 05. CPU Scheduling](https://github.com/2dongyeop/TIL/blob/main/OS/OS-CPU-scheduling.md)
       - [chapter 06. Synchronization tools](https://github.com/2dongyeop/TIL/blob/main/OS/synchronization-tools.md)
       - [chapter 07. Synchronization examples](https://github.com/2dongyeop/TIL/blob/main/OS/synchronization-examples.md)
+      - [chapter 08. Deadlock](https://github.com/2dongyeop/TIL/blob/main/OS/deadlock.md)
 
 <br/>
 
