@@ -48,6 +48,12 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 <br/>
 
+- ## JPA
+    - ### 자바 ORM 표준 JPA 프로그래밍
+        - [chapter 01. JPA 소개](https://leedongyeop.notion.site/1-JPA-469075c47f354d42bd19def5dd8b0393)
+
+<br/>
+
 - ## OS
     - [프로세스와 스레드](https://github.com/2dongyeop/TIL/blob/main/OS/process-and-thread.md)
     - [멀티프로세스와 멀티스레드](https://github.com/2dongyeop/TIL/blob/main/OS/multi-process-and-thread.md)
