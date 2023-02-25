@@ -71,6 +71,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
       - [chapter 06. Synchronization tools](https://github.com/2dongyeop/TIL/blob/main/OS/synchronization-tools.md)
       - [chapter 07. Synchronization examples](https://github.com/2dongyeop/TIL/blob/main/OS/synchronization-examples.md)
       - [chapter 08. Deadlock](https://github.com/2dongyeop/TIL/blob/main/OS/deadlock.md)
+      - [chapter 09. Main Memory](https://github.com/2dongyeop/TIL/blob/main/OS/main-memory.md)
 
 <br/>
 
