@@ -53,6 +53,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [chapter 01. JPA 소개](https://leedongyeop.notion.site/1-JPA-469075c47f354d42bd19def5dd8b0393)
         - [chapter 02. JPA 시작](https://leedongyeop.notion.site/1-JPA-469075c47f354d42bd19def5dd8b0393)
         - [chapter 03. 영속성 관리](https://leedongyeop.notion.site/3-4cad508eb8924eea9c7c961037e8948c)
+        - [chapter 04. 엔티티 매핑](https://leedongyeop.notion.site/4-c374cc0e56cf4a3fbf2f0ecad5b6879b)
 
 <br/>
 
