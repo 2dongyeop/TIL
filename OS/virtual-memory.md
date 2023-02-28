@@ -940,3 +940,45 @@ OS는 페이지 폴트를 해결하기 위해 가용 프레임의 풀인 **가�
 <br/>
 
 <br/>
+
+# 💡 메모리 압축 _Memory Compression
+
+> 페이징의 대안은 메모리 압축이다.
+> 
+- 여기서는 수정된 프레임을 스왑 공간으로 페이징 아웃하지 않고 여러 프렝미을 하나의 프레임으로 압축한다.
+    - → 시스템이 페이지 스와핑에 의존하지 않고도 메모리 사용량을 줄일 수 있음!
+
+<br/>
+
+<br/>
+
+- 압축 이전
+    
+    <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/10-21.png" width = 500/>
+
+    
+<br/>
+
+<br/>
+
+
+- 압축 이후
+    
+    <img src="https://github.com/2dongyeop/TIL/blob/main/OS/image/10-22.png" width = 500/>
+
+    
+
+<br/>
+
+<br/>
+
+> 앞서 말했듯 모바일 시스템은 스와핑을 지원하지 않는다.
+> 
+- 따라서 메모리 압축은 Android 및 iOS를 포함한 모바일 운영체제의 메모리 관리 전략의 핵심이다!
+    - 또한 Windows 10과 macOS는 모두 메모리 압축을 지원한다.
+    - Windows 10의 경우 Microsoft는 **UWP**(Universal Windows Platform) 아키텍처를 개발함!
+
+
+<br/>
+
+<br/>
