@@ -118,6 +118,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
       - [HTTP 메서드 활용](https://leedongyeop.notion.site/HTTP-3e835214ef7d406a8c6e8def89145818)
       - [HTTP 상태 코드](https://leedongyeop.notion.site/HTTP-f439ea34661848abb84b4b31e00a7237)
       - [HTTP 헤더1 - 일반 헤더](https://leedongyeop.notion.site/HTTP-1-2cfb61a21a8448938008107be427324e)
+      - [HTTP 헤더2 - 캐시와 조건부 요청](https://leedongyeop.notion.site/HTTP-2-fc40119eaa3543fbabb7e94e3a4f148e)
 
 <br/>
 
