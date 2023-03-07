@@ -78,6 +78,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
       - [chapter 08. Deadlock](https://github.com/2dongyeop/TIL/blob/main/OS/deadlock.md)
       - [chapter 09. Main Memory](https://github.com/2dongyeop/TIL/blob/main/OS/main-memory.md)
       - [chapter 10. Virtual Memory](https://github.com/2dongyeop/TIL/blob/main/OS/virtual-memory.md)
+      - [chapter 11. Mass Storage Structure](https://github.com/2dongyeop/TIL/blob/main/OS/mass-storage-structure.md)
 
 <br/>
 
