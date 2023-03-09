@@ -133,3 +133,11 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 - ## Design-pattern
   - [도메인 모델 패턴 vs 트랜잭션 스크립트 패턴](https://velog.io/@dongvelop/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%EB%8F%84%EB%A9%94%EC%9D%B8-%EB%AA%A8%EB%8D%B8-%ED%8C%A8%ED%84%B4%EA%B3%BC-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%ED%8C%A8%ED%84%B4)
+
+
+<br/>
+
+- ## Software Architecture
+    - ### 원티드 주관 프리온보딩 백엔드 챌린지 3월
+        - [이벤트 링크](https://www.notion.so/leedongyeop/3-84eeacdf641d49d4915e2bfa1fbee417)
+        - [*Week 1-1 : 도메인과 아키텍처*](https://www.notion.so/leedongyeop/1-22f9ca69b5eb4721810c3f8d54583287)
