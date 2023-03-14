@@ -142,3 +142,4 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [이벤트 링크](https://www.notion.so/leedongyeop/3-84eeacdf641d49d4915e2bfa1fbee417)
         - [*Week 1-1 : 도메인과 아키텍처*](https://www.notion.so/leedongyeop/1-22f9ca69b5eb4721810c3f8d54583287)
         - [*Week 1-2 : Controller, Service, Repository, Layered Architecture,DI*](https://leedongyeop.notion.site/Controller-Service-Repository-Layered-Architecture-DI-a624322e8e894641ac0cc3c28ed7cbb7)
+        - [*자율과제 : MVC와 Layered Architecture*](https://leedongyeop.notion.site/MVC-Layered-Architecture-1947a8703d2c412ba7cfdff005200a3a)
