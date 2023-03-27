@@ -59,6 +59,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [chapter 05. 연관관계 매핑 기초](https://leedongyeop.notion.site/5-86d32fa487204d0ea5abaf3cae03b5b6)
         - [chapter 06. 다양한 연관관계 매핑](https://leedongyeop.notion.site/6-58843c3d85ed41acbac5b31996f0b154)
         - [chapter 07. 고급 매핑](https://leedongyeop.notion.site/7-5f10d880d1b6446f9135fde312f150c5)
+        - [chapter 08. 프록시와 연관관계 관리](https://leedongyeop.notion.site/8-86d0555bee834e409dd0c7e8a210f4b7)
 
 <br/>
 
