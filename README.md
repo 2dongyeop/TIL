@@ -136,6 +136,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [SQL(feat. DDL&DML)](https://github.com/2dongyeop/TIL/blob/main/Database/SQL.md)
     - [무결성 제약조건](https://github.com/2dongyeop/TIL/blob/main/Database/Integrity-Constraint.md)
     - [함수 종속과 정규화](https://github.com/2dongyeop/TIL/blob/main/Database/normalization.md)
+    - [트랜잭션](https://github.com/2dongyeop/TIL/blob/main/Database/transaction.md)
 
 <br/>
 
