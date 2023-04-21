@@ -161,6 +161,11 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 <br/>
 
 - ## Software Architecture
+    - ### 만들면서 배우는 클린 아키텍처
+        - [01. 계층형 아키텍처의 문제는 무엇일까?](https://leedongyeop.notion.site/01-c1e847c6e1a84e8f998d1bd60ba59924)
+
+    <br/>
+
     - ### 원티드 주관 프리온보딩 백엔드 챌린지 3월
         - [이벤트 링크](https://www.notion.so/leedongyeop/3-84eeacdf641d49d4915e2bfa1fbee417)
         - [*Week 1-1 : 도메인과 아키텍처*](https://www.notion.so/leedongyeop/1-22f9ca69b5eb4721810c3f8d54583287)
