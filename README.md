@@ -180,3 +180,10 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [*Week 1-2 : Controller, Service, Repository, Layered Architecture,DI*](https://leedongyeop.notion.site/Controller-Service-Repository-Layered-Architecture-DI-a624322e8e894641ac0cc3c28ed7cbb7)
         - [*Week 2-1 : Entity, Usecase, Adapters, Infrastructure*](https://leedongyeop.notion.site/Entity-Usecase-Adapters-Infrastructure-1bfc65c1d6384c2fac8fa89e87899ac3)
         - [*자율과제 : MVC와 Layered Architecture*](https://leedongyeop.notion.site/MVC-Layered-Architecture-1947a8703d2c412ba7cfdff005200a3a)
+
+<br/>
+
+- ## AWS
+    - ### 원티드 주관 프리온보딩 백엔드 챌린지 5월
+        - [이벤트 링크](https://www.wanted.co.kr/events/pre_challenge_be_7?category=tag.gyoyug)
+        - [*Week 1-1 : AWS 인프라 : 클라우드 컴퓨팅, AWS API Gateway, AWS S3, AWS ELB, AWS CloudFront*](https://www.notion.so/leedongyeop/1-7e38798e66954d918190378b54f8ae6b)
