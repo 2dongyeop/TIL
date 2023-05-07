@@ -171,6 +171,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [02. 의존성 역전하기](https://leedongyeop.notion.site/02-423d9742364945bca8eba8211a3a8154)
         - [03. 코드 구성하기](https://leedongyeop.notion.site/03-7fff3821d7694475a16fff1d43415674)
         - [04. 유스케이스 구현하기](https://leedongyeop.notion.site/04-2d5f08def63a46629eb69aa7bcc18ded)
+        - [05. 웹 어댑터 구현하기](https://leedongyeop.notion.site/05-0b97b47b45514c16ab20e9f9cdf317e0)
 
     <br/>
 
