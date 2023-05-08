@@ -50,6 +50,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [chapter 3. 람다 표현식](https://leedongyeop.notion.site/chapter-3-8709c08400bb4042817db74cb10862b3)
         - [chapter 4. 스트림 소개](https://leedongyeop.notion.site/chapter-4-aad6c8f3cbb94322a26aebc0cf3f9799)
         - [chapter 5. 스트림 활용](https://leedongyeop.notion.site/chapter-5-74611b7c530d41b8b97cabd97fa0b2e3)
+        - [chapter 7. 병렬 데이터 처리와 성능](https://leedongyeop.notion.site/chapter-7-3426716fcee34f9782a0a2c7f720320f)
         - [chapter 8. 컬렉션 API 개선](https://leedongyeop.notion.site/chapter-8-API-de2118f4b44a4f8b84e4aebebd61dbe4)
         - [chapter 9. 리팩토링, 테스팅, 디버깅](https://leedongyeop.notion.site/chapter-9-2d3251261d8a4ab098081e6934e93fe5)
         - [chapter 10. 람다를 이용한 도메인 전용 언어](https://leedongyeop.notion.site/chapter-10-84a4da1bb2d445f4af3dffbcf4ae5bc5)
