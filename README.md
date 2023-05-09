@@ -21,6 +21,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [ep 4. 사라진 내 1월에 대하여](https://velog.io/@dongvelop/ep-4.-%EC%82%AC%EB%9D%BC%EC%A7%84-1%EC%9B%94%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC)
     - [ep 5. 취직할 수 있을까요😭](https://velog.io/@dongvelop/ep-5.-%EC%B7%A8%EC%A7%81%ED%95%A0-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C%EC%9A%94)
     - [ep 6. 3월이지만 내 열정은 여름이다](https://velog.io/@dongvelop/ep-6)
+    - [ep 7. 인풋은 상당한데 아웃풋은 어디로?](https://velog.io/@dongvelop/ep-7)
 
 <br/>
 
