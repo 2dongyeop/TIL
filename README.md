@@ -57,6 +57,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [chapter 10. 람다를 이용한 도메인 전용 언어](https://leedongyeop.notion.site/chapter-10-84a4da1bb2d445f4af3dffbcf4ae5bc5)
         - [chapter 11. null 대신 Optional](https://leedongyeop.notion.site/chapter-11-null-Optional-59a28562710b44dcb20230e37f21d705)
         - [chapter 13. 디폴트 메서드](https://leedongyeop.notion.site/chapter-13-5b37c3cfaebc437b8657c5446a78f86b)
+        - [chapter 15. CompletableFuture와 리액티브 프로그래밍 컨셉 기초](https://leedongyeop.notion.site/chapter-15-CompletableFuture-33c7ac049203420b8377601314127e83)
     
     <br/>
 
