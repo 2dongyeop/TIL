@@ -180,6 +180,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [04. 유스케이스 구현하기](https://leedongyeop.notion.site/04-2d5f08def63a46629eb69aa7bcc18ded)
         - [05. 웹 어댑터 구현하기](https://leedongyeop.notion.site/05-0b97b47b45514c16ab20e9f9cdf317e0)
         - [06. 영속성 어댑터 구현하기](https://leedongyeop.notion.site/06-17391d35b2c140078a27b38e59344872)
+        - [07. 아키텍처 요소 테스트하기](https://leedongyeop.notion.site/07-3d183cdb51054be39e077eb3c2f47c5c)
 
     <br/>
 
