@@ -182,6 +182,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [06. 영속성 어댑터 구현하기](https://leedongyeop.notion.site/06-17391d35b2c140078a27b38e59344872)
         - [07. 아키텍처 요소 테스트하기](https://leedongyeop.notion.site/07-3d183cdb51054be39e077eb3c2f47c5c)
         - [08. 경계 간 매핑하기](https://leedongyeop.notion.site/08-7fe912839d6a4e5da228ac8e5a21968b)
+        - [09. 애플리케이션 조립하기](https://leedongyeop.notion.site/09-64dab95f142f449b8162504b386f4a55)
 
     <br/>
 
