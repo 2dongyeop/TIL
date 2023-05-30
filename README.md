@@ -185,6 +185,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [08. 경계 간 매핑하기](https://leedongyeop.notion.site/08-7fe912839d6a4e5da228ac8e5a21968b)
         - [09. 애플리케이션 조립하기](https://leedongyeop.notion.site/09-64dab95f142f449b8162504b386f4a55)
         - [10. 아키텍처 경계 강제하기](https://leedongyeop.notion.site/10-36dae74d6007445886bcb0a596e3f6d6)
+        - [11. 의식적으로 지름길 사용하기](https://leedongyeop.notion.site/11-673a56db587e4eb48968b2f96b45c689)
 
     <br/>
 
