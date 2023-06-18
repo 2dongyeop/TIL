@@ -163,6 +163,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [함수 종속과 정규화](https://github.com/2dongyeop/TIL/blob/main/Database/normalization.md)
     - [트랜잭션](https://github.com/2dongyeop/TIL/blob/main/Database/transaction.md)
     - [조인](https://github.com/2dongyeop/TIL/blob/main/Database/join.md)
+    - [인덱스](https://leedongyeop.notion.site/10ab8e0d47774b5286b914c42c760a8a?pvs=4)
 
 <br/>
 
