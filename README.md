@@ -14,14 +14,15 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 ## 분류
 - ## 회고록
-    - [ep 0. 블로그의 시작](https://velog.io/@dongvelop/ep-0.-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%9D%98-%EC%8B%9C%EC%9E%91)
-    - [ep 1. 첫 회고록(feat. 슈퍼주니어 개발자)](https://velog.io/@dongvelop/%EC%8A%88%ED%8D%BC%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%B2%AB-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
-    - [ep 2. 11월 회고록](https://velog.io/@dongvelop/ep-2.-11%EC%9B%94-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
-    - [ep 3. 3학년을 마치고 작성해보는 12월 회고록](https://velog.io/@dongvelop/ep-3.-3%ED%95%99%EB%85%84%EC%9D%84-%EB%A7%88%EC%B9%98%EA%B3%A0-%EC%9E%91%EC%84%B1%ED%95%B4%EB%B3%B4%EB%8A%94-12%EC%9B%94-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
-    - [ep 4. 사라진 내 1월에 대하여](https://velog.io/@dongvelop/ep-4.-%EC%82%AC%EB%9D%BC%EC%A7%84-1%EC%9B%94%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC)
-    - [ep 5. 취직할 수 있을까요😭](https://velog.io/@dongvelop/ep-5.-%EC%B7%A8%EC%A7%81%ED%95%A0-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C%EC%9A%94)
-    - [ep 6. 3월이지만 내 열정은 여름이다](https://velog.io/@dongvelop/ep-6)
+    - [ep 8. 벌써 다가온 상반기 마무리](https://velog.io/@dongvelop/ep-8)
     - [ep 7. 인풋은 상당한데 아웃풋은 어디로?](https://velog.io/@dongvelop/ep-7)
+    - [ep 6. 3월이지만 내 열정은 여름이다](https://velog.io/@dongvelop/ep-6)
+    - [ep 5. 취직할 수 있을까요😭](https://velog.io/@dongvelop/ep-5.-%EC%B7%A8%EC%A7%81%ED%95%A0-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C%EC%9A%94)
+    - [ep 4. 사라진 내 1월에 대하여](https://velog.io/@dongvelop/ep-4.-%EC%82%AC%EB%9D%BC%EC%A7%84-1%EC%9B%94%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC)
+    - [ep 3. 3학년을 마치고 작성해보는 12월 회고록](https://velog.io/@dongvelop/ep-3.-3%ED%95%99%EB%85%84%EC%9D%84-%EB%A7%88%EC%B9%98%EA%B3%A0-%EC%9E%91%EC%84%B1%ED%95%B4%EB%B3%B4%EB%8A%94-12%EC%9B%94-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
+    - [ep 2. 11월 회고록](https://velog.io/@dongvelop/ep-2.-11%EC%9B%94-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
+    - [ep 1. 첫 회고록(feat. 슈퍼주니어 개발자)](https://velog.io/@dongvelop/%EC%8A%88%ED%8D%BC%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%B2%AB-%ED%9A%8C%EA%B3%A0%EB%A1%9D)
+    - [ep 0. 블로그의 시작](https://velog.io/@dongvelop/ep-0.-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%9D%98-%EC%8B%9C%EC%9E%91)
 
 <br/>
 
