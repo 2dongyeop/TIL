@@ -14,6 +14,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 ## 분류
 - ## 회고록
+    - [2023 SW중심대학 공동해커톤 후기(feat. 해내자!)](https://velog.io/@dongvelop/%ED%95%B4%EC%BB%A4%ED%86%A4%ED%9B%84%EA%B8%B0)
     - [ep 8. 벌써 다가온 상반기 마무리](https://velog.io/@dongvelop/ep-8)
     - [ep 7. 인풋은 상당한데 아웃풋은 어디로?](https://velog.io/@dongvelop/ep-7)
     - [ep 6. 3월이지만 내 열정은 여름이다](https://velog.io/@dongvelop/ep-6)
