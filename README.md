@@ -204,6 +204,11 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [*Week 2-1 : Entity, Usecase, Adapters, Infrastructure*](https://leedongyeop.notion.site/Entity-Usecase-Adapters-Infrastructure-1bfc65c1d6384c2fac8fa89e87899ac3)
         - [*자율과제 : MVC와 Layered Architecture*](https://leedongyeop.notion.site/MVC-Layered-Architecture-1947a8703d2c412ba7cfdff005200a3a)
 
+    <br/>
+
+    - ### 원티드 주관 프리온보딩 백엔드 챌린지 7월
+        - [*Week 1-1 : 기술 면접에서 시스템 설계 문제가 가지는 의미*](https://leedongyeop.notion.site/Week-1-1-aac71292854d4debbbeaba81c94eb51a?pvs=4)
+
 <br/>
 
 - ## AWS
