@@ -208,6 +208,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
     - ### 원티드 주관 프리온보딩 백엔드 챌린지 7월
         - [*Week 1-1 : 기술 면접에서 시스템 설계 문제가 가지는 의미*](https://leedongyeop.notion.site/Week-1-1-aac71292854d4debbbeaba81c94eb51a?pvs=4)
+        - [*Week 1-2 : 사용자 수에 따른 규모를 확장하는 방법 1편*](https://leedongyeop.notion.site/Week-1-2-1-09aeaee7afbd42b8b405afb2b147f581?pvs=4)
 
 <br/>
 
