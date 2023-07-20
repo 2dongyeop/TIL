@@ -201,6 +201,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - ### 대규모 시스템 설계 기초
         - [1장. 사용자 수에 따른 규모 확장성](https://leedongyeop.notion.site/1-fb34b782090a416a83c766810dd1adaa?pvs=4)
         - [2장. 개략적인 규모 측정](https://leedongyeop.notion.site/2-24d2f29c8f7c474e9de37ef5bd4b7123?pvs=4)
+        - [3장. 시스템 설계 면접 공략법](https://leedongyeop.notion.site/3-afec214f9ca74f49adbcc38000d5197e?pvs=4)
 
     <br/>
 
