@@ -206,6 +206,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [4장. 처리율 제한 장치의 설계](https://leedongyeop.notion.site/4-8d4fcdfc382e41b4bcb1b17731463140?pvs=4)
         - [5장. 안정 해시 설계](https://www.notion.so/leedongyeop/5-ec27874ddc0a4652aacc70352230e595?pvs=4)
         - [6장. 키-값 저장소 설계](https://www.notion.so/leedongyeop/6-e5d6b57f38dc44a2b1c9f79adf0a9d88?pvs=4)
+        - [7장. 분산 시스템을 위한 유일 ID 생성기 설계](https://leedongyeop.notion.site/7-ID-f2237ef8d1e5464285d17a5b328ddc35?pvs=4)
 
     <br/>
 
