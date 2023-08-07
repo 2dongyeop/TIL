@@ -208,6 +208,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [6장. 키-값 저장소 설계](https://www.notion.so/leedongyeop/6-e5d6b57f38dc44a2b1c9f79adf0a9d88?pvs=4)
         - [7장. 분산 시스템을 위한 유일 ID 생성기 설계](https://leedongyeop.notion.site/7-ID-f2237ef8d1e5464285d17a5b328ddc35?pvs=4)
         - [8장. URL 단축기 설계](https://leedongyeop.notion.site/8-URL-0a804d4aba934736901df81136d837e1?pvs=4)
+        - [9장. 웹 크롤러 설계](https://www.notion.so/leedongyeop/9-2c151bb8b272468bae47e7dc783360c7?pvs=4)
 
     <br/>
 
