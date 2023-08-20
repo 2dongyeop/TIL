@@ -70,9 +70,10 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 <br/>
 
-- ## JPA
+- ## Spring & JPA
     - [ORM부터 영속성 컨텍스트, N+1 문제 등 JPA의 기초까지](https://github.com/2dongyeop/TIL/blob/main/Jpa/orm-jpa-basic.md)
     - [JPA에서의 Transaction Lock(Optimistic & Pessimistic)](https://www.notion.so/leedongyeop/34f11e648bf64c25ae1eb89cbbce83d7?pvs=4)
+    - [Filter & Interceptor & AOP](https://www.notion.so/leedongyeop/Filter-Interceptor-AOP-6957cfc1fb4b4859a6742ff1fb4df879)
 
     <br/>
 
