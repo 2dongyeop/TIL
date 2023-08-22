@@ -88,6 +88,9 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [chapter 08. 프록시와 연관관계 관리](https://leedongyeop.notion.site/8-86d0555bee834e409dd0c7e8a210f4b7)
         - [chapter 10-1. 객체지향 쿼리 언어 : JPQL](https://leedongyeop.notion.site/10-1-JPQL-2d243a1106884e4e864df59133989122)
 
+    - ### 코드로 배우는 스프링부트 웹 프로젝트
+        - [4.10 검색 처리](https://leedongyeop.notion.site/4-10-0b8e0b2b57f948e9b400d33c42e87a4f?pvs=4)
+
 <br/>
 
 - ## OS
