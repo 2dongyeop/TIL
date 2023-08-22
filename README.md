@@ -74,6 +74,11 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [ORM부터 영속성 컨텍스트, N+1 문제 등 JPA의 기초까지](https://github.com/2dongyeop/TIL/blob/main/Jpa/orm-jpa-basic.md)
     - [JPA에서의 Transaction Lock(Optimistic & Pessimistic)](https://www.notion.so/leedongyeop/34f11e648bf64c25ae1eb89cbbce83d7?pvs=4)
     - [Filter & Interceptor & AOP](https://www.notion.so/leedongyeop/Filter-Interceptor-AOP-6957cfc1fb4b4859a6742ff1fb4df879)
+    - [Database Connection Pool : HikariCP](https://velog.io/@dongvelop/Spring-Boot-Hikari-CP-%EC%BB%A4%EC%8A%A4%ED%85%80%EC%9C%BC%EB%A1%9C-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EA%B8%B0)
+    - [Bucket4j로 서버 측 처리율 제한 장치 구축하기](https://velog.io/@dongvelop/Spring-Boot-Bucket4j%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EC%84%9C%EB%B2%84-%EC%B8%A1-%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0)
+    - [@Builder가 과연 좋을까?](https://velog.io/@dongvelop/Springboot-Builder%EA%B0%80-%EA%B3%BC%EC%97%B0-%EC%A2%8B%EC%9D%84%EA%B9%8C)
+    - [CompletableFuture로 비동기 작업 안정화 및 성능 개선기](https://velog.io/@dongvelop/CompletableFuture%EB%A1%9C-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85-%EC%95%88%EC%A0%95%ED%99%94-%EB%B0%8F-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8)
+
 
     <br/>
 
