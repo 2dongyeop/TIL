@@ -78,6 +78,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [Bucket4j로 서버 측 처리율 제한 장치 구축하기](https://velog.io/@dongvelop/Spring-Boot-Bucket4j%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EC%84%9C%EB%B2%84-%EC%B8%A1-%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0)
     - [@Builder가 과연 좋을까?](https://velog.io/@dongvelop/Springboot-Builder%EA%B0%80-%EA%B3%BC%EC%97%B0-%EC%A2%8B%EC%9D%84%EA%B9%8C)
     - [CompletableFuture로 비동기 작업 안정화 및 성능 개선기](https://velog.io/@dongvelop/CompletableFuture%EB%A1%9C-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85-%EC%95%88%EC%A0%95%ED%99%94-%EB%B0%8F-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8)
+    - [@Transactional(propagation=?) : 트랜잭션 전파](https://velog.io/@dongvelop/Springboot-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EB%A1%A4%EB%B0%B1-%EA%B3%A0%EB%A0%A4%EB%8A%94-%ED%95%98%EA%B3%A0-%EC%9E%88%EB%82%98)
 
 
     <br/>
