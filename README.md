@@ -29,6 +29,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 <br/>
 
 - ## Java
+    - [JDK 1.5 ~ JDK 21 버전 별 문법 특징 정리](https://www.notion.so/leedongyeop/JDK-1-5-21-b8b2422c51844ad6b98731f1636b879c)
     - [예외 처리](https://github.com/2dongyeop/TIL/blob/main/Java/exception-handling.md)
     - [멀티 스레드](https://github.com/2dongyeop/TIL/blob/main/Java/thread.md)
     - [제네릭](https://github.com/2dongyeop/TIL/blob/main/Java/generic.md)
