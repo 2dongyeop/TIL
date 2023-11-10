@@ -14,6 +14,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 ## 분류
 - ## 회고록
+    - [ep 10. 4개월 치 주니어 개발자 회고록 및 생각 정리](https://velog.io/@dongvelop/ep-10)
     - [ep 9. 기분 좋은 3분기 시작(feat. 이동엽 취직하다.)](https://velog.io/@dongvelop/ep-9)
     - [2023 SW중심대학 공동해커톤 후기(feat. 해내자!)](https://velog.io/@dongvelop/%ED%95%B4%EC%BB%A4%ED%86%A4%ED%9B%84%EA%B8%B0)
     - [ep 8. 벌써 다가온 상반기 마무리](https://velog.io/@dongvelop/ep-8)
