@@ -83,7 +83,8 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [CompletableFuture로 비동기 작업 안정화 및 성능 개선기](https://velog.io/@dongvelop/CompletableFuture%EB%A1%9C-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85-%EC%95%88%EC%A0%95%ED%99%94-%EB%B0%8F-%EC%84%B1%EB%8A%A5-%ED%85%8C%EC%8A%A4%ED%8A%B8)
     - [@Transactional(propagation=?) : 트랜잭션 전파](https://velog.io/@dongvelop/Springboot-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EB%A1%A4%EB%B0%B1-%EA%B3%A0%EB%A0%A4%EB%8A%94-%ED%95%98%EA%B3%A0-%EC%9E%88%EB%82%98)
     - [@Enumerated(EnumType.ORDINAL)에 굴복하지 않으려 컨버터를 만들었다.](https://velog.io/@dongvelop/Springboot-Converter%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EC%BD%94%EB%93%9C-Enum-%EA%B0%9C%EC%84%A0%EA%B8%B0)
-    - [Springboot Graceful Shutdown(feat. 우아한 종료)](https://velog.io/@dongvelop/Springboot-Graceful-Shutdown)
+    - [Spring Boot Graceful Shutdown(feat. 우아한 종료)](https://velog.io/@dongvelop/Springboot-Graceful-Shutdown)
+    - [프로메테우스&그라파나로 서버 모니터링 시 주의봐야할 대시보드별 설명](https://leedongyeop.notion.site/c471b606bfa54e6a987b8f6668f8e1eb)
 
 
     <br/>
