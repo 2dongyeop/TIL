@@ -91,6 +91,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
     - ### Spring in Action, 5th Edition
         - [1장. 스프링 시작하기](https://www.notion.so/leedongyeop/1-c3fdadaa071d415fba3eec5550c1cfe9?pvs=4)
+        - [2장. 웹 애플리케이션 개발하기](https://www.notion.so/leedongyeop/2-18d9770633064df18273eae6dc920eda)
 
     - ### 자바 ORM 표준 JPA 프로그래밍
         - [chapter 01. JPA 소개](https://leedongyeop.notion.site/1-JPA-469075c47f354d42bd19def5dd8b0393)
