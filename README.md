@@ -96,6 +96,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
         - [3장. 데이터로 작업하기](https://www.notion.so/leedongyeop/3-809ceee1a10d49f3aeab34f9629fab82?pvs=4)
         - [4장. 스프링 시큐리티](https://www.notion.so/leedongyeop/4-8f962eece1e840c980e86fdecb99a1ab)
         - [5장. 구성 속성 사용하기](https://leedongyeop.notion.site/5-e92be49717d840b19f112032064d59b1?pvs=4)
+        - [6장. REST 서비스 생성하기](https://leedongyeop.notion.site/6-REST-e7c026c44b6d452ba22a5ac5abcff6cd?pvs=4)
 
     - ### 자바 ORM 표준 JPA 프로그래밍
         - [chapter 01. JPA 소개](https://leedongyeop.notion.site/1-JPA-469075c47f354d42bd19def5dd8b0393)
