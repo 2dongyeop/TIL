@@ -258,6 +258,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 <br/>
 
 - ## AWS
+    - [EC2 인스턴스 초기 세팅 메뉴얼](https://velog.io/@dongvelop/AWS-EC2-Ubuntu-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85)
     - ### 원티드 주관 프리온보딩 백엔드 챌린지 5월
         - [이벤트 링크](https://www.wanted.co.kr/events/pre_challenge_be_7?category=tag.gyoyug)
         - [*Week 1-1 : AWS 인프라 : 클라우드 컴퓨팅, AWS API Gateway, AWS S3, AWS ELB, AWS CloudFront*](https://www.notion.so/leedongyeop/1-7e38798e66954d918190378b54f8ae6b)
