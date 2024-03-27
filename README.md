@@ -260,6 +260,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 - ## AWS
     - [EC2 인스턴스 초기 세팅 메뉴얼](https://velog.io/@dongvelop/AWS-EC2-Ubuntu-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85)
     - [로드밸런서와 API 게이트웨이](https://velog.io/@dongvelop/AWS-%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%84%9C%EC%99%80-API-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4)
+    - [AWS CloudWatch 구성 및 활용 메뉴얼](https://velog.io/@dongvelop/AWS-CloudWatch)
     - ### 원티드 주관 프리온보딩 백엔드 챌린지 5월
         - [이벤트 링크](https://www.wanted.co.kr/events/pre_challenge_be_7?category=tag.gyoyug)
         - [*Week 1-1 : AWS 인프라 : 클라우드 컴퓨팅, AWS API Gateway, AWS S3, AWS ELB, AWS CloudFront*](https://www.notion.so/leedongyeop/1-7e38798e66954d918190378b54f8ae6b)
