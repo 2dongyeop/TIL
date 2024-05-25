@@ -200,6 +200,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [트랜잭션](https://github.com/2dongyeop/TIL/blob/main/Database/transaction.md)
     - [조인](https://github.com/2dongyeop/TIL/blob/main/Database/join.md)
     - [인덱스](https://leedongyeop.notion.site/10ab8e0d47774b5286b914c42c760a8a?pvs=4)
+    - [`mysqldump`로 DB 마이그레이션하기](https://velog.io/@dongvelop/MySQL-mysqldump%EB%A1%9C-DB-%EB%A7%88%EC%9D%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%85%98%ED%95%98%EA%B8%B0)
 
 <br/>
 
