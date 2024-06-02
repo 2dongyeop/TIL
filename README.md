@@ -88,6 +88,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [프로메테우스&그라파나로 서버 모니터링 시 주의봐야할 대시보드별 설명](https://leedongyeop.notion.site/c471b606bfa54e6a987b8f6668f8e1eb)
     - [Spring Cloud OpenFegin 메뉴얼 정리(feat. REST(HTTP) Client..)](https://velog.io/@dongvelop/Spring-Cloud-OpenFeign-%EB%A9%94%EB%89%B4%EC%96%BC-%EC%A0%95%EB%A6%AC-with-Spring-REST-Clients)
     - [Spring Boot with GraphQL](https://velog.io/@dongvelop/Spring-Boot-GraphQL-%EC%86%8C%EA%B0%9C)
+    - [Out of Memory when Using JDK21](https://velog.io/@dongvelop/Spring-Boot-Out-of-Memory-when-Using-JDK21)
 
 
     <br/>
