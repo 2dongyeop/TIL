@@ -266,6 +266,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [로드밸런서와 API 게이트웨이](https://velog.io/@dongvelop/AWS-%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%84%9C%EC%99%80-API-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4)
     - [AWS CloudWatch 구성 및 활용 메뉴얼](https://velog.io/@dongvelop/AWS-CloudWatch)
     - [AWS CloudWatch 메트릭을 추출하여 RDS 모니터링하기](https://velog.io/@dongvelop/AWS-RDS-Exporter%EB%A1%9C-%EB%B9%84%EC%9A%A9-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EA%B8%B0)
+    - [AWS Summit Seoul 2024 후기 및 채널톡의 스파이크 트래픽 대처기](https://velog.io/@dongvelop/Spring-Boot-AWS-Summit-Seoul-2024-%ED%9B%84%EA%B8%B0%EC%B1%84%EB%84%90%ED%86%A1%EC%9D%98-%EC%8A%A4%ED%8C%8C%EC%9D%B4%ED%81%AC-%ED%8A%B8%EB%9E%98%ED%94%BD-%EB%8C%80%EC%B2%98%ED%95%98%EA%B8%B0)
     - ### 원티드 주관 프리온보딩 백엔드 챌린지 5월
         - [이벤트 링크](https://www.wanted.co.kr/events/pre_challenge_be_7?category=tag.gyoyug)
         - [*Week 1-1 : AWS 인프라 : 클라우드 컴퓨팅, AWS API Gateway, AWS S3, AWS ELB, AWS CloudFront*](https://www.notion.so/leedongyeop/1-7e38798e66954d918190378b54f8ae6b)
