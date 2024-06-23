@@ -89,6 +89,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [Spring Cloud OpenFegin 메뉴얼 정리(feat. REST(HTTP) Client..)](https://velog.io/@dongvelop/Spring-Cloud-OpenFeign-%EB%A9%94%EB%89%B4%EC%96%BC-%EC%A0%95%EB%A6%AC-with-Spring-REST-Clients)
     - [Spring Boot with GraphQL](https://velog.io/@dongvelop/Spring-Boot-GraphQL-%EC%86%8C%EA%B0%9C)
     - [Out of Memory when Using JDK21](https://velog.io/@dongvelop/Spring-Boot-Out-of-Memory-when-Using-JDK21)
+    - [JVM Cold Start 최적화하기](https://velog.io/@dongvelop/Spring-Boot-JVM-Cold-Start-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EA%B8%B0)
 
 
     <br/>
