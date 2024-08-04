@@ -92,6 +92,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [Out of Memory when Using JDK21](https://velog.io/@dongvelop/Spring-Boot-Out-of-Memory-when-Using-JDK21)
     - [JVM Cold Start 최적화하기](https://velog.io/@dongvelop/Spring-Boot-JVM-Cold-Start-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EA%B8%B0)
     - [Swagger 대신 Smart-Doc](https://velog.io/@dongvelop/Java-Smart-Doc-Swagger-%EB%8C%80%EC%B2%B4%EC%95%88)
+    - [Observability - 분산 추적과 성능 모니터링](https://velog.io/@dongvelop/Spring-Boot-Observability-%EB%B6%84%EC%82%B0-%EC%B6%94%EC%A0%81%EA%B3%BC-%EC%84%B1%EB%8A%A5-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81)
 
 
     <br/>
