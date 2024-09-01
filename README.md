@@ -86,13 +86,12 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [@Transactional(propagation=?) : 트랜잭션 전파](https://velog.io/@dongvelop/Springboot-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EB%A1%A4%EB%B0%B1-%EA%B3%A0%EB%A0%A4%EB%8A%94-%ED%95%98%EA%B3%A0-%EC%9E%88%EB%82%98)
     - [@Enumerated(EnumType.ORDINAL)에 굴복하지 않으려 컨버터를 만들었다.](https://velog.io/@dongvelop/Springboot-Converter%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%A0%88%EA%B1%B0%EC%8B%9C-%EC%BD%94%EB%93%9C-Enum-%EA%B0%9C%EC%84%A0%EA%B8%B0)
     - [Spring Boot Graceful Shutdown(feat. 우아한 종료)](https://velog.io/@dongvelop/Springboot-Graceful-Shutdown)
-    - [프로메테우스&그라파나로 서버 모니터링 시 주의봐야할 대시보드별 설명](https://leedongyeop.notion.site/c471b606bfa54e6a987b8f6668f8e1eb)
     - [Spring Cloud OpenFegin 메뉴얼 정리(feat. REST(HTTP) Client..)](https://velog.io/@dongvelop/Spring-Cloud-OpenFeign-%EB%A9%94%EB%89%B4%EC%96%BC-%EC%A0%95%EB%A6%AC-with-Spring-REST-Clients)
     - [Spring Boot with GraphQL](https://velog.io/@dongvelop/Spring-Boot-GraphQL-%EC%86%8C%EA%B0%9C)
     - [Out of Memory when Using JDK21](https://velog.io/@dongvelop/Spring-Boot-Out-of-Memory-when-Using-JDK21)
     - [JVM Cold Start 최적화하기](https://velog.io/@dongvelop/Spring-Boot-JVM-Cold-Start-%EC%B5%9C%EC%A0%81%ED%99%94%ED%95%98%EA%B8%B0)
     - [Swagger 대신 Smart-Doc](https://velog.io/@dongvelop/Java-Smart-Doc-Swagger-%EB%8C%80%EC%B2%B4%EC%95%88)
-    - [Observability - 분산 추적과 성능 모니터링](https://velog.io/@dongvelop/Spring-Boot-Observability-%EB%B6%84%EC%82%B0-%EC%B6%94%EC%A0%81%EA%B3%BC-%EC%84%B1%EB%8A%A5-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81)
+    
 
 
     <br/>
@@ -119,6 +118,15 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - ### 코드로 배우는 스프링부트 웹 프로젝트
         - [4.10 검색 처리](https://leedongyeop.notion.site/4-10-0b8e0b2b57f948e9b400d33c42e87a4f?pvs=4)
         - [8. 파일 업로드 처리](https://leedongyeop.notion.site/8-79d10d10b6204d12831de521b1e97ad0?pvs=4)
+
+<br/>
+
+- ## Infra
+    - [Pinpoint로 APM 구축하고, nGrinder & AB로 성능테스트하기](https://velog.io/@dongvelop/APM%EA%B3%BC-%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8)
+    - [프로메테우스&그라파나로 서버 모니터링 시 주의봐야할 대시보드별 설명](https://leedongyeop.notion.site/c471b606bfa54e6a987b8f6668f8e1eb)
+    - [Spring Observability - 분산 추적과 성능 모니터링](https://velog.io/@dongvelop/Spring-Boot-Observability-%EB%B6%84%EC%82%B0-%EC%B6%94%EC%A0%81%EA%B3%BC-%EC%84%B1%EB%8A%A5-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81)
+    - [성능테스트 툴 소개](https://velog.io/@dongvelop/%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%88%B4-%EC%86%8C%EA%B0%9C)
+
 
 <br/>
 
@@ -186,7 +194,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
     - [Websocket & Stomp](https://github.com/2dongyeop/TIL/blob/main/Network/websocket-and-stomp.md)
     - [Load Balancing](https://leedongyeop.notion.site/fd960c83e228464080cc84ed4abb008b?pvs=4)
     - [로드밸런서와 API 게이트웨이](https://leedongyeop.notion.site/API-9f5e387ece3a49069bb23f6e9e366bcf?pvs=4)
-    - [성능테스트 툴 소개](https://velog.io/@dongvelop/%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%88%B4-%EC%86%8C%EA%B0%9C)
+
     - ### 모든 개발자를 위한 HTTP 웹 지식
       - [인터넷 네트워크](https://leedongyeop.notion.site/f78f722c27c54ec2ad3ecd3bc08c7eba)
       - [URI와 웹브라우저 요청 흐름](https://leedongyeop.notion.site/URI-6558ac065d5543318c88c3f39f794bdb)
