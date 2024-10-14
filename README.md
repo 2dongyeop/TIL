@@ -123,9 +123,10 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 <br/>
 
 - ## Infra
-    - [Pinpoint로 APM 구축하고, nGrinder & AB로 성능테스트하기](https://velog.io/@dongvelop/APM%EA%B3%BC-%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8)
+    - [Pinpoint v3.0.0(Using JDK 17) 구축기](https://github.com/2dongyeop/pinpoint-using-jdk17/blob/main/README.md#pinpoint-using-jdk17)
     - [프로메테우스&그라파나로 서버 모니터링 시 주의봐야할 대시보드별 설명](https://leedongyeop.notion.site/c471b606bfa54e6a987b8f6668f8e1eb)
     - [Spring Observability - 분산 추적과 성능 모니터링](https://velog.io/@dongvelop/Spring-Boot-Observability-%EB%B6%84%EC%82%B0-%EC%B6%94%EC%A0%81%EA%B3%BC-%EC%84%B1%EB%8A%A5-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81)
+    - [Pinpoint로 APM 구축하고, nGrinder & AB로 성능테스트하기](https://velog.io/@dongvelop/APM%EA%B3%BC-%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8)
     - [성능테스트 툴 소개](https://velog.io/@dongvelop/%EC%84%B1%EB%8A%A5%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%88%B4-%EC%86%8C%EA%B0%9C)
 
 
