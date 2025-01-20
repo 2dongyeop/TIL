@@ -14,6 +14,7 @@ Today I Learn인데 날짜를 표기하지 않는 이유는 의미없이 날짜�
 
 ## 분류
 - ## 회고록
+    - [ep 13. 주니어 백엔드의 90일 성장기: 불안정에서 안정으로](https://velog.io/@dongvelop/ep-13)
     - [ep 12. 2년차가 된 스타트업의 사수없는 백엔드 개발자 회고록](https://velog.io/@dongvelop/ep-12)
     - [ep 11. 7개월 차가 되고서야 2024년을 쓰다.](https://velog.io/@dongvelop/ep-11)
     - [ep 10. 4개월 치 주니어 개발자 회고록 및 생각 정리](https://velog.io/@dongvelop/ep-10)
